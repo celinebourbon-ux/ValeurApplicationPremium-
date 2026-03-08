@@ -7,7 +7,7 @@
    ══════════════════════════════════════════════════════════════ */
 
 /* ── URLS ─────────────────────────────────────────────────────── */
-const VALEUR_BASE = 'https://celinebourbon-ux.github.io/HomePageAppliValeur/';
+const VALEUR_BASE = 'https://celinebourbon-ux.github.io/ValeurApplicationPremium-/';
 
 const MODULE_URLS = {
   home:    VALEUR_BASE,

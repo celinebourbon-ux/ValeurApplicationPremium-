@@ -7,7 +7,746 @@
   <title>Module 3 — LOCALISER · V.A.L.E.U.R©</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/design-system.css"/>
+  <style>
+/* ═══════════════════════════════════════════════════════════════════
+   DESIGN SYSTEM — V.A.L.E.U.R© Premium Glassmorphism
+   © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue
+   "De la peur à la joie d'être soi" — Éditions L'Harmattan
+   Tous droits réservés. Reproduction interdite.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── GOOGLE FONTS ─────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap');
+
+/* ── CSS VARIABLES ────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-void:      #050a12;
+  --bg-deep:      #0a0f1a;
+  --bg-mid:       #111827;
+  --bg-surface:   #1a2235;
+  --bg-raised:    #243047;
+
+  /* Glass */
+  --glass-bg:     rgba(255,255,255,0.04);
+  --glass-bg-2:   rgba(255,255,255,0.07);
+  --glass-bg-3:   rgba(255,255,255,0.11);
+  --glass-border: rgba(255,255,255,0.10);
+  --glass-border-2: rgba(255,255,255,0.18);
+  --glass-glow:   rgba(201,168,76,0.12);
+
+  /* Gold */
+  --gold:         #c9a84c;
+  --gold-light:   #f0d080;
+  --gold-dim:     rgba(201,168,76,0.3);
+  --gold-glow:    rgba(201,168,76,0.15);
+
+  /* Text */
+  --text-bright:  #f7f3ee;
+  --text-main:    #e2e8f0;
+  --text-muted:   #94a3b8;
+  --text-dim:     #64748b;
+
+  /* 7 Masques */
+  --rouge:        #e53e3e;
+  --rouge-glow:   rgba(229,62,62,0.25);
+  --orange:       #ed8936;
+  --orange-glow:  rgba(237,137,54,0.25);
+  --jaune:        #d69e2e;
+  --jaune-glow:   rgba(214,158,46,0.25);
+  --vert:         #38a169;
+  --vert-glow:    rgba(56,161,105,0.25);
+  --bleu:         #3182ce;
+  --bleu-glow:    rgba(49,130,206,0.25);
+  --indigo:       #5a67d8;
+  --indigo-glow:  rgba(90,103,216,0.25);
+  --violet:       #805ad5;
+  --violet-glow:  rgba(128,90,213,0.25);
+
+  /* Borders */
+  --border-dim:   rgba(255,255,255,0.06);
+  --border-mid:   rgba(255,255,255,0.10);
+  --border-gold:  rgba(201,168,76,0.35);
+
+  /* Radius */
+  --r-sm:  8px;
+  --r-md:  14px;
+  --r-lg:  20px;
+  --r-xl:  28px;
+  --r-2xl: 36px;
+
+  /* Shadows */
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:   0 4px 24px rgba(0,0,0,0.5);
+  --shadow-lg:   0 8px 40px rgba(0,0,0,0.6);
+  --shadow-gold: 0 4px 24px rgba(201,168,76,0.25);
+  --shadow-glow: 0 0 40px rgba(201,168,76,0.12);
+
+  /* Blur */
+  --blur-sm: blur(12px);
+  --blur-md: blur(20px);
+  --blur-lg: blur(32px);
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+  --ease-inout: cubic-bezier(0.4,0,0.2,1);
+  --t-fast:  0.15s;
+  --t-mid:   0.3s;
+  --t-slow:  0.5s;
+}
+
+/* ── RESET ────────────────────────────────────────────────────────── */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body {
+  font-family:'Jost',sans-serif;
+  background:var(--bg-deep);
+  color:var(--text-main);
+  min-height:100vh;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ── ANTI-COPY PROTECTION ──────────────────────────────────────────── */
+body {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+input, textarea { user-select:text !important; }
+
+/* ── BACKGROUND MESH ──────────────────────────────────────────────── */
+.bg-mesh {
+  position:fixed; inset:0; z-index:-1;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(128,90,213,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 100%, rgba(49,130,206,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%),
+    linear-gradient(160deg, #0a0f1a 0%, #0d1520 50%, #0a1128 100%);
+}
+.bg-mesh::after {
+  content:'';
+  position:absolute; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  opacity:0.4; pointer-events:none;
+}
+
+/* ── GLASS CARD ───────────────────────────────────────────────────── */
+.glass {
+  background:var(--glass-bg);
+  backdrop-filter:var(--blur-md);
+  -webkit-backdrop-filter:var(--blur-md);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-lg);
+}
+.glass-2 {
+  background:var(--glass-bg-2);
+  backdrop-filter:var(--blur-md);
+  -webkit-backdrop-filter:var(--blur-md);
+  border:1px solid var(--glass-border-2);
+  border-radius:var(--r-lg);
+}
+.glass-card {
+  background:var(--glass-bg);
+  backdrop-filter:var(--blur-md);
+  -webkit-backdrop-filter:var(--blur-md);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-xl);
+  box-shadow:var(--shadow-md);
+  padding:24px;
+  transition:border-color var(--t-mid) var(--ease-out),
+             box-shadow var(--t-mid) var(--ease-out),
+             transform var(--t-mid) var(--ease-out);
+}
+.glass-card:hover {
+  border-color:rgba(255,255,255,0.16);
+  box-shadow:var(--shadow-lg), var(--shadow-glow);
+  transform:translateY(-2px);
+}
+.glass-card-gold {
+  border-color:var(--border-gold);
+  box-shadow:var(--shadow-md), 0 0 30px rgba(201,168,76,0.08);
+}
+
+/* ── STICKY GLASS HEADER ──────────────────────────────────────────── */
+.glass-header {
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:200;
+  background:rgba(10,15,26,0.85);
+  backdrop-filter:var(--blur-md);
+  -webkit-backdrop-filter:var(--blur-md);
+  border-bottom:1px solid var(--glass-border);
+  height:56px;
+  display:flex;
+  align-items:center;
+  padding:0 16px;
+  gap:12px;
+}
+.header-logo {
+  font-family:'Cormorant Garamond',serif;
+  color:var(--gold);
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+.header-subtitle {
+  font-size:11px;
+  color:var(--text-dim);
+  white-space:nowrap;
+  font-weight:400;
+  letter-spacing:0.5px;
+}
+.header-spacer { flex:1; }
+.header-progress-mini {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* ── PROGRESS BAR (sticky override) ─────────────────────────────── */
+#valeur-progress-bar {
+  position:fixed !important;
+  top:56px !important;
+  left:0; right:0;
+  z-index:190;
+  background:rgba(10,15,26,0.9) !important;
+  backdrop-filter:var(--blur-sm);
+  -webkit-backdrop-filter:var(--blur-sm);
+  border-bottom:1px solid var(--border-dim) !important;
+  padding:8px 16px !important;
+}
+
+/* ── PAGE LAYOUT ──────────────────────────────────────────────────── */
+.page-content {
+  padding-top:108px; /* header + progress bar */
+  padding-bottom:100px;
+  max-width:720px;
+  margin:0 auto;
+  padding-left:16px;
+  padding-right:16px;
+}
+
+/* ── TYPOGRAPHY ───────────────────────────────────────────────────── */
+.display-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,6vw,48px);
+  font-weight:600;
+  line-height:1.15;
+  color:var(--text-bright);
+  letter-spacing:-0.5px;
+}
+.display-title em {
+  color:var(--gold);
+  font-style:italic;
+}
+.section-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(20px,4vw,28px);
+  font-weight:600;
+  color:var(--text-bright);
+  margin-bottom:16px;
+}
+.label-gold {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gold);
+  border:1px solid var(--border-gold);
+  padding:4px 12px;
+  border-radius:20px;
+  background:rgba(201,168,76,0.06);
+}
+.text-muted { color:var(--text-muted); font-size:14px; line-height:1.7; }
+.text-dim { color:var(--text-dim); font-size:13px; }
+
+/* ── BUTTONS ──────────────────────────────────────────────────────── */
+.btn-primary {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:linear-gradient(135deg,var(--gold),#e8c060);
+  color:#0a0f1a;
+  border:none;
+  border-radius:var(--r-md);
+  padding:14px 28px;
+  font-family:'Jost',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  letter-spacing:0.5px;
+  box-shadow:var(--shadow-gold);
+  transition:all var(--t-mid) var(--ease-spring);
+}
+.btn-primary:hover {
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 8px 32px rgba(201,168,76,0.45);
+}
+.btn-primary:active { transform:scale(0.98); }
+
+.btn-glass {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:var(--glass-bg-2);
+  backdrop-filter:var(--blur-sm);
+  color:var(--text-main);
+  border:1px solid var(--glass-border-2);
+  border-radius:var(--r-md);
+  padding:12px 24px;
+  font-family:'Jost',sans-serif;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all var(--t-mid) var(--ease-out);
+}
+.btn-glass:hover {
+  background:var(--glass-bg-3);
+  border-color:rgba(255,255,255,0.25);
+  transform:translateY(-1px);
+}
+
+.btn-ghost {
+  background:none;
+  border:1px solid var(--border-dim);
+  color:var(--text-muted);
+  border-radius:var(--r-md);
+  padding:10px 20px;
+  font-family:'Jost',sans-serif;
+  font-size:13px;
+  font-weight:500;
+  cursor:pointer;
+  transition:all var(--t-fast) var(--ease-out);
+}
+.btn-ghost:hover { border-color:var(--glass-border-2); color:var(--text-main); }
+
+/* ── FAB — FLOATING ACTION BUTTON ────────────────────────────────── */
+.fab {
+  position:fixed;
+  bottom:28px;
+  right:20px;
+  z-index:300;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#e8c060);
+  border:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 6px 24px rgba(201,168,76,0.5), 0 2px 8px rgba(0,0,0,0.5);
+  animation:fab-float 3s ease-in-out infinite;
+  transition:transform var(--t-mid) var(--ease-spring), box-shadow var(--t-mid);
+}
+.fab:hover {
+  transform:scale(1.12) translateY(-2px);
+  box-shadow:0 10px 36px rgba(201,168,76,0.65), 0 2px 12px rgba(0,0,0,0.5);
+  animation:none;
+}
+.fab:active { transform:scale(0.94); }
+@keyframes fab-float {
+  0%,100% { transform:translateY(0); }
+  50%      { transform:translateY(-6px); }
+}
+
+/* ── MODAL OVERLAY ────────────────────────────────────────────────── */
+.modal-overlay {
+  position:fixed;
+  inset:0;
+  z-index:400;
+  background:rgba(5,10,18,0.85);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:16px;
+  opacity:0;
+  visibility:hidden;
+  transition:all var(--t-mid) var(--ease-out);
+}
+.modal-overlay.open {
+  opacity:1;
+  visibility:visible;
+}
+.modal-sheet {
+  background:rgba(15,22,38,0.95);
+  backdrop-filter:var(--blur-lg);
+  -webkit-backdrop-filter:var(--blur-lg);
+  border:1px solid var(--glass-border-2);
+  border-radius:var(--r-2xl) var(--r-2xl) var(--r-lg) var(--r-lg);
+  width:100%;
+  max-width:600px;
+  max-height:90vh;
+  overflow-y:auto;
+  padding:28px 24px;
+  transform:translateY(40px);
+  transition:transform var(--t-mid) var(--ease-spring);
+  box-shadow:0 -8px 60px rgba(0,0,0,0.6);
+}
+.modal-overlay.open .modal-sheet {
+  transform:translateY(0);
+}
+.modal-handle {
+  width:40px;
+  height:4px;
+  background:var(--glass-border-2);
+  border-radius:2px;
+  margin:0 auto 20px;
+}
+
+/* ── JOURNAL FORM ─────────────────────────────────────────────────── */
+.journal-step {
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-lg);
+  padding:18px;
+  margin-bottom:12px;
+  transition:border-color var(--t-mid);
+}
+.journal-step.active {
+  border-color:var(--border-gold);
+  background:rgba(201,168,76,0.04);
+}
+.journal-step-header {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+.journal-letter {
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--gold),#e8c060);
+  color:#0a0f1a;
+  font-size:16px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-family:'Cormorant Garamond',serif;
+}
+.journal-label {
+  font-weight:700;
+  font-size:13px;
+  color:var(--text-bright);
+}
+.journal-sublabel {
+  font-size:11px;
+  color:var(--text-dim);
+  line-height:1.5;
+}
+.journal-textarea {
+  width:100%;
+  background:rgba(255,255,255,0.03);
+  border:1px solid var(--border-dim);
+  border-radius:var(--r-sm);
+  color:var(--text-main);
+  font-family:'Jost',sans-serif;
+  font-size:14px;
+  line-height:1.7;
+  padding:12px 14px;
+  resize:vertical;
+  min-height:80px;
+  transition:border-color var(--t-fast);
+  user-select:text;
+}
+.journal-textarea:focus {
+  outline:none;
+  border-color:var(--border-gold);
+  background:rgba(201,168,76,0.03);
+}
+.journal-textarea::placeholder { color:var(--text-dim); }
+
+/* ── MASQUE SELECTOR ──────────────────────────────────────────────── */
+.masque-grid {
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:8px;
+}
+.masque-chip {
+  aspect-ratio:1;
+  border-radius:10px;
+  background:var(--glass-bg);
+  border:2px solid transparent;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  transition:all var(--t-mid) var(--ease-spring);
+  font-size:18px;
+}
+.masque-chip:hover { transform:scale(1.1); }
+.masque-chip.selected {
+  border-color:currentColor;
+  transform:scale(1.08);
+}
+.masque-chip-dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+}
+
+/* ── MODULE CARDS ─────────────────────────────────────────────────── */
+.module-card {
+  position:relative;
+  background:var(--glass-bg);
+  backdrop-filter:var(--blur-md);
+  -webkit-backdrop-filter:var(--blur-md);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-xl);
+  padding:22px;
+  overflow:hidden;
+  transition:all var(--t-mid) var(--ease-out);
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+}
+.module-card::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--module-color,var(--gold)),transparent);
+  opacity:0.8;
+}
+.module-card:hover {
+  border-color:rgba(255,255,255,0.16);
+  transform:translateY(-3px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08);
+}
+.module-card.done::after {
+  content:'✓';
+  position:absolute;
+  top:14px; right:16px;
+  width:26px; height:26px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#e8c060);
+  color:#0a0f1a;
+  font-weight:900;
+  font-size:13px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.module-number {
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--text-dim);
+  margin-bottom:8px;
+}
+.module-letter {
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;
+  font-weight:700;
+  line-height:1;
+  margin-bottom:6px;
+  background:linear-gradient(135deg,var(--module-color,var(--gold)),color-mix(in srgb,var(--module-color,var(--gold)) 60%,white));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.module-name {
+  font-size:16px;
+  font-weight:700;
+  color:var(--text-bright);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.module-desc { font-size:13px; color:var(--text-muted); line-height:1.6; }
+
+/* ── STAT CARDS ───────────────────────────────────────────────────── */
+.stat-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.stat-card {
+  background:var(--glass-bg);
+  backdrop-filter:var(--blur-sm);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-lg);
+  padding:18px;
+  text-align:center;
+}
+.stat-value {
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;
+  font-weight:700;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:6px;
+}
+.stat-label { font-size:11px; color:var(--text-dim); letter-spacing:1px; text-transform:uppercase; }
+
+/* ── CONFETTI SYSTEM ──────────────────────────────────────────────── */
+.confetti-canvas {
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  pointer-events:none;
+}
+
+/* ── ANIMATIONS ───────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(24px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+@keyframes scaleIn {
+  from { opacity:0; transform:scale(0.92); }
+  to   { opacity:1; transform:scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position:-200% center; }
+  100% { background-position:200% center; }
+}
+@keyframes pulse-gold {
+  0%,100% { box-shadow:0 0 0 0 rgba(201,168,76,0.4); }
+  50%      { box-shadow:0 0 0 8px rgba(201,168,76,0); }
+}
+
+.animate-in { animation:fadeInUp 0.6s var(--ease-spring) both; }
+.animate-in-2 { animation:fadeInUp 0.6s var(--ease-spring) 0.1s both; }
+.animate-in-3 { animation:fadeInUp 0.6s var(--ease-spring) 0.2s both; }
+.animate-in-4 { animation:fadeInUp 0.6s var(--ease-spring) 0.3s both; }
+.animate-in-5 { animation:fadeInUp 0.6s var(--ease-spring) 0.4s both; }
+
+/* ── DIVIDER ──────────────────────────────────────────────────────── */
+.gold-divider {
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--border-gold),transparent);
+  margin:28px 0;
+}
+
+/* ── TOAST / NOTIFICATION ────────────────────────────────────────── */
+.toast {
+  position:fixed;
+  bottom:96px;
+  left:50%;
+  transform:translateX(-50%) translateY(20px);
+  background:rgba(15,22,38,0.95);
+  backdrop-filter:var(--blur-md);
+  border:1px solid var(--border-gold);
+  border-radius:var(--r-lg);
+  padding:12px 20px;
+  font-size:14px;
+  font-weight:600;
+  color:var(--text-bright);
+  opacity:0;
+  transition:all var(--t-mid) var(--ease-spring);
+  white-space:nowrap;
+  z-index:350;
+  box-shadow:var(--shadow-gold);
+}
+.toast.show {
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+/* ── COPYRIGHT FOOTER ────────────────────────────────────────────── */
+.copyright-footer {
+  text-align:center;
+  padding:20px 16px 8px;
+  font-size:10px;
+  color:var(--text-dim);
+  letter-spacing:0.5px;
+  line-height:1.8;
+  border-top:1px solid var(--border-dim);
+  margin-top:32px;
+}
+.copyright-footer a { color:var(--gold); text-decoration:none; }
+
+/* ── SCROLLBAR ────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--border-mid); border-radius:2px; }
+::-webkit-scrollbar-thumb:hover { background:var(--glass-border-2); }
+
+/* ── MOBILE RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width:480px) {
+  .glass-card { padding:18px; border-radius:var(--r-lg); }
+  .stat-grid { grid-template-columns:1fr 1fr; gap:8px; }
+  .masque-grid { gap:6px; }
+  .page-content { padding-top:100px; padding-left:12px; padding-right:12px; }
+}
+
+/* ── MODULE PAGE SPECIFICS ────────────────────────────────────────── */
+.module-hero {
+  border-radius:var(--r-xl);
+  padding:32px 24px;
+  margin-bottom:24px;
+  position:relative;
+  overflow:hidden;
+}
+.module-hero::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 70% 60% at 30% 50%,var(--module-color-glow,rgba(201,168,76,0.15)),transparent 70%);
+  pointer-events:none;
+}
+.exercise-card {
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  border-radius:var(--r-lg);
+  padding:20px;
+  margin-bottom:12px;
+  transition:all var(--t-mid);
+}
+.exercise-number {
+  width:28px; height:28px;
+  border-radius:8px;
+  background:linear-gradient(135deg,var(--module-color,var(--gold)),color-mix(in srgb,var(--module-color,var(--gold)) 70%,white));
+  color:#0a0f1a;
+  font-weight:800;
+  font-size:13px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:12px;
+  flex-shrink:0;
+}
+.step-item {
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid var(--border-dim);
+}
+.step-item:last-child { border-bottom:none; }
+.step-dot {
+  width:10px; height:10px;
+  border-radius:50%;
+  background:var(--module-color,var(--gold));
+  margin-top:5px;
+  flex-shrink:0;
+  box-shadow:0 0 8px var(--module-color,var(--gold));
+}
+
+</style>
   <script src="valeur-config.js"></script>
   <style>
     :root {
@@ -158,7 +897,300 @@
     </footer>
   </main>
 
-  <script src="assets/js/journal-manager.js"></script>
+  <script>
+/* ═══════════════════════════════════════════════════════════════════
+   JOURNAL-MANAGER.JS — Journal Universel V.A.L.E.U.R©
+   © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue
+   Tous droits réservés.
+   ═══════════════════════════════════════════════════════════════════ */
+
+(function() {
+  'use strict';
+
+  const LS_KEY = 'valeur_journal_entries';
+  const MASQUES = [
+    { id:'rouge',  emoji:'🔴', color:'#e53e3e', label:'Rouge',  peur:'Mort / maladie' },
+    { id:'orange', emoji:'🟠', color:'#ed8936', label:'Orange', peur:'Souffrance psychique' },
+    { id:'jaune',  emoji:'🟡', color:'#d69e2e', label:'Jaune',  peur:'Inconnu / incertitude' },
+    { id:'vert',   emoji:'🟢', color:'#38a169', label:'Vert',   peur:'Rejet / abandon' },
+    { id:'bleu',   emoji:'🔵', color:'#3182ce', label:'Bleu',   peur:'Impuissance' },
+    { id:'indigo', emoji:'🔷', color:'#5a67d8', label:'Indigo', peur:'Échec / inadéquation' },
+    { id:'violet', emoji:'💜', color:'#805ad5', label:'Violet', peur:'Perte d\'identité' },
+  ];
+
+  const STEPS = [
+    { letter:'V', name:'VOIR',       desc:'Quel masque est actif ? Quel est le déclencheur ?' },
+    { letter:'A', name:'ACCUEILLIR', desc:'Quelle émotion est présente ? Comment vous sentez-vous ?' },
+    { letter:'L', name:'LOCALISER',  desc:'Où le ressentez-vous dans votre corps ?' },
+    { letter:'E', name:'EXPLORER',   desc:'Quel conflit intérieur existe ? Une part de moi voudrait... mais une autre...' },
+    { letter:'U', name:'UNIFIER',    desc:'Comment réconcilier ces deux parts de vous ?' },
+    { letter:'R', name:'RENFORCER',  desc:'Quelle nouvelle action choisissez-vous ? Quelle posture nouvelle ?' },
+  ];
+
+  // ── STORAGE ────────────────────────────────────────────────────────
+  function getEntries() {
+    try { return JSON.parse(localStorage.getItem(LS_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function saveEntry(entry) {
+    const entries = getEntries();
+    entries.unshift(entry);
+    if (entries.length > 50) entries.splice(50);
+    try { localStorage.setItem(LS_KEY, JSON.stringify(entries)); } catch(e) {}
+    window.dispatchEvent(new CustomEvent('valeur:journal-updated', { detail: { entries } }));
+  }
+  function getStats() {
+    const entries = getEntries();
+    const masqueCounts = {};
+    MASQUES.forEach(m => masqueCounts[m.id] = 0);
+    entries.forEach(e => { if (e.masque) masqueCounts[e.masque] = (masqueCounts[e.masque]||0)+1; });
+    return { total: entries.length, masqueCounts, lastEntry: entries[0] || null };
+  }
+
+  // ── MODAL BUILD ────────────────────────────────────────────────────
+  function buildModal() {
+    const overlay = document.createElement('div');
+    overlay.id = 'valeur-journal-modal';
+    overlay.className = 'modal-overlay';
+    overlay.setAttribute('role','dialog');
+    overlay.setAttribute('aria-label','Journal V.A.L.E.U.R©');
+
+    let selectedMasque = null;
+    const stepValues = ['','','','','',''];
+
+    overlay.innerHTML = `
+      <div class="modal-sheet">
+        <div class="modal-handle"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+          <div>
+            <div class="label-gold" style="margin-bottom:8px;">📓 MON JOURNAL</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#f7f3ee;">Méthode V.A.L.E.U.R©</div>
+          </div>
+          <button id="journal-close" style="background:none;border:none;cursor:pointer;color:#64748b;font-size:22px;padding:8px;line-height:1;" aria-label="Fermer">×</button>
+        </div>
+
+        <!-- MASQUE SELECTOR -->
+        <div class="glass-card" style="margin-bottom:16px;padding:16px;">
+          <div style="font-size:12px;font-weight:700;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">Masque actif (optionnel)</div>
+          <div class="masque-grid" id="masque-selector">
+            ${MASQUES.map(m => `
+              <button class="masque-chip" data-masque="${m.id}" style="color:${m.color};" title="${m.label} — ${m.peur}">
+                <span>${m.emoji}</span>
+                <div class="masque-chip-dot" style="background:${m.color};"></div>
+              </button>
+            `).join('')}
+          </div>
+          <div id="masque-selected-label" style="text-align:center;font-size:12px;color:#64748b;margin-top:8px;height:16px;"></div>
+        </div>
+
+        <!-- V.A.L.E.U.R STEPS -->
+        <div id="journal-steps">
+          ${STEPS.map((s,i) => `
+            <div class="journal-step" data-step="${i}">
+              <div class="journal-step-header">
+                <div class="journal-letter">${s.letter}</div>
+                <div>
+                  <div class="journal-label">${s.name}</div>
+                  <div class="journal-sublabel">${s.desc}</div>
+                </div>
+              </div>
+              <textarea class="journal-textarea" data-index="${i}" placeholder="${s.desc}" rows="3" maxlength="500"></textarea>
+            </div>
+          `).join('')}
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:20px;">
+          <button id="journal-save" class="btn-primary" style="flex:1;">
+            ✨ Enregistrer dans mon journal
+          </button>
+        </div>
+        <div style="text-align:center;font-size:10px;color:#475569;margin-top:12px;letter-spacing:0.5px;">
+          © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon · Données stockées localement
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    // Close
+    overlay.querySelector('#journal-close').addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+
+    // Masque selection
+    overlay.querySelectorAll('.masque-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        overlay.querySelectorAll('.masque-chip').forEach(c => c.classList.remove('selected'));
+        chip.classList.add('selected');
+        selectedMasque = chip.dataset.masque;
+        const m = MASQUES.find(x => x.id === selectedMasque);
+        overlay.querySelector('#masque-selected-label').textContent = m ? `${m.label} — ${m.peur}` : '';
+        overlay.querySelector('#masque-selected-label').style.color = m ? m.color : '#64748b';
+      });
+    });
+
+    // Step focus highlight
+    overlay.querySelectorAll('.journal-textarea').forEach(ta => {
+      ta.addEventListener('focus', () => {
+        overlay.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
+        ta.closest('.journal-step').classList.add('active');
+      });
+      ta.addEventListener('input', e => {
+        stepValues[parseInt(e.target.dataset.index)] = e.target.value;
+      });
+    });
+
+    // Save
+    overlay.querySelector('#journal-save').addEventListener('click', () => {
+      const textareas = overlay.querySelectorAll('.journal-textarea');
+      const steps = {};
+      let hasContent = false;
+      STEPS.forEach((s, i) => {
+        const val = textareas[i].value.trim();
+        if (val) hasContent = true;
+        steps[s.letter] = val;
+      });
+      if (!hasContent && !selectedMasque) {
+        showToast('Remplissez au moins un champ pour enregistrer 🌱');
+        return;
+      }
+      const entry = {
+        id: Date.now(),
+        date: new Date().toISOString(),
+        masque: selectedMasque,
+        steps,
+      };
+      saveEntry(entry);
+      closeModal();
+      showConfetti();
+      showToast('✨ Journal enregistré avec succès');
+    });
+
+    return overlay;
+  }
+
+  // ── FAB BUILD ──────────────────────────────────────────────────────
+  function buildFAB() {
+    const fab = document.createElement('button');
+    fab.className = 'fab';
+    fab.id = 'valeur-fab';
+    fab.setAttribute('aria-label','Ouvrir le journal V.A.L.E.U.R©');
+    fab.setAttribute('title','Journal V.A.L.E.U.R©');
+    fab.innerHTML = '📓';
+    fab.addEventListener('click', openModal);
+    document.body.appendChild(fab);
+    return fab;
+  }
+
+  // ── MODAL CONTROL ──────────────────────────────────────────────────
+  let modalEl = null;
+  function openModal() {
+    if (!modalEl) modalEl = buildModal();
+    modalEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    modalEl.querySelectorAll('.journal-textarea')[0]?.focus();
+  }
+  function closeModal() {
+    if (modalEl) {
+      modalEl.classList.remove('open');
+      document.body.style.overflow = '';
+      // Reset form
+      modalEl.querySelectorAll('.journal-textarea').forEach(ta => ta.value = '');
+      modalEl.querySelectorAll('.masque-chip').forEach(c => c.classList.remove('selected'));
+      const lbl = modalEl.querySelector('#masque-selected-label');
+      if (lbl) { lbl.textContent = ''; lbl.style.color = '#64748b'; }
+      modalEl.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
+    }
+  }
+
+  // ── TOAST ──────────────────────────────────────────────────────────
+  let toastEl = null;
+  function showToast(msg) {
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'toast';
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastEl._timer);
+    toastEl._timer = setTimeout(() => toastEl.classList.remove('show'), 3000);
+  }
+
+  // ── CONFETTI ───────────────────────────────────────────────────────
+  function showConfetti() {
+    const canvas = document.createElement('canvas');
+    canvas.className = 'confetti-canvas';
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
+    const COLORS = ['#c9a84c','#f0d080','#e53e3e','#38a169','#3182ce','#805ad5','#ed8936'];
+    const particles = Array.from({length:80},() => ({
+      x: Math.random() * canvas.width,
+      y: -20,
+      vx: (Math.random()-0.5)*4,
+      vy: Math.random()*4+2,
+      r: Math.random()*5+3,
+      color: COLORS[Math.floor(Math.random()*COLORS.length)],
+      rot: Math.random()*360,
+      rv: (Math.random()-0.5)*8,
+      shape: Math.random()>0.5?'circle':'rect'
+    }));
+    let frame = 0;
+    function draw() {
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      particles.forEach(p => {
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot*Math.PI/180);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = Math.max(0, 1 - frame/120);
+        if (p.shape === 'circle') {
+          ctx.beginPath(); ctx.arc(0,0,p.r,0,Math.PI*2); ctx.fill();
+        } else {
+          ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r);
+        }
+        ctx.restore();
+        p.x += p.vx; p.y += p.vy; p.rot += p.rv; p.vy += 0.1;
+      });
+      frame++;
+      if (frame < 150) requestAnimationFrame(draw);
+      else canvas.remove();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  // ── PUBLIC API ─────────────────────────────────────────────────────
+  window.VALEUR_JOURNAL = {
+    open: openModal,
+    close: closeModal,
+    getEntries,
+    saveEntry,
+    getStats,
+    showToast,
+    showConfetti,
+    MASQUES
+  };
+
+  // ── INIT ON DOM READY ──────────────────────────────────────────────
+  function init() {
+    buildFAB();
+    // Prevent right-click and text selection globally
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('selectstart', e => {
+      if (!['INPUT','TEXTAREA'].includes(e.target.tagName)) e.preventDefault();
+    });
+    document.addEventListener('keydown', e => {
+      if ((e.ctrlKey||e.metaKey) && ['c','u','s','a'].includes(e.key.toLowerCase())) {
+        if (!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)) e.preventDefault();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+
+</script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       VALEUR_PROGRESS.render('module3');
