@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>Module 5 — UNIFIER · V.A.L.E.U.R©</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/design-system.css"/>
+  <script src="valeur-config.js"></script>
+  <style>
+    :root {
+      --module-color:#3182ce;
+      --module-color-glow:rgba(49,130,206,0.15);
+    }
+    .accroche-box {
+      background:rgba(255,255,255,0.02);
+      border-left:3px solid #3182ce;
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+      padding:18px 20px; margin-bottom:16px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:16px; font-style:italic;
+      color:var(--text-bright); line-height:1.8;
+    }
+    .complete-btn {
+      width:100%; padding:18px;
+      background:linear-gradient(135deg,#3182ce,#3182cecc);
+      border:none; border-radius:var(--r-xl);
+      font-family:'Jost',sans-serif;
+      font-size:17px; font-weight:800;
+      color:#fff; cursor:pointer; margin:24px 0 12px;
+      box-shadow:0 4px 24px #3182ce55;
+      transition:all 0.3s var(--ease-spring);
+      letter-spacing:0.5px;
+    }
+    .complete-btn:hover { transform:translateY(-2px); box-shadow:0 8px 36px #3182ce66; }
+    .complete-btn:disabled {
+      background:linear-gradient(135deg,var(--vert),#2d8a5a);
+      cursor:default; transform:none;
+    }
+    .phase-tag {
+      display:inline-flex; align-items:center; gap:6px;
+      background:#3182ce18; border:1px solid #3182ce44;
+      border-radius:20px; padding:4px 14px;
+      font-size:11px; font-weight:700;
+      color:#3182ce; letter-spacing:1px;
+      text-transform:uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <header class="glass-header">
+    <a href="module4.html" style="color:var(--text-muted);font-size:18px;padding:4px 8px;text-decoration:none;line-height:1;">←</a>
+    <div class="header-logo" style="color:#3182ce;">U</div>
+    <div class="header-subtitle">UNIFIER</div>
+    <div class="header-spacer"></div>
+    <button onclick="VALEUR_JOURNAL.open()" style="background:none;border:1px solid var(--border-gold);border-radius:20px;padding:5px 14px;color:var(--gold);font-size:12px;font-weight:600;cursor:pointer;font-family:'Jost',sans-serif;">📓 Journal</button>
+  </header>
+  <div id="valeur-progress-bar"></div>
+
+  <main class="page-content">
+
+    <!-- HERO -->
+    <div class="module-hero glass-card animate-in" style="background:linear-gradient(135deg,rgba(49,130,206,0.15),#3182ce05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div class="phase-tag">MODULE 5</div>
+        <span style="font-size:28px;">🤝</span>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,46px);font-weight:700;color:#3182ce;line-height:1;margin-bottom:10px;letter-spacing:2px;">U</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,32px);font-weight:600;color:var(--text-bright);margin-bottom:8px;">UNIFIER</h1>
+      <p style="font-size:14px;color:var(--text-muted);">Réconcilier les parties en conflit</p>
+    </div>
+
+    <!-- ACCROCHE -->
+    <div class="accroche-box animate-in-2">
+      Après avoir exploré le conflit, vient le moment de la réconciliation. Pas de faire taire une partie — mais de trouver ce qui peut satisfaire les deux.
+    </div>
+
+    <!-- INTRO -->
+    <div class="glass-card animate-in-2" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">💡 L'ESSENTIEL</div>
+      <p class="text-muted" style="font-size:14px;line-height:1.8;">L'<strong style='color:var(--text-bright)'>UNIFICATION</strong> n'est pas l'élimination d'une partie. C'est la création d'une relation nouvelle entre votre nature authentique et votre masque — anciens ennemis devenus alliés.</p>
+      <div class="gold-divider" style="margin:14px 0;"></div>
+      <div style="background:#3182ce08;border:1px solid #3182ce25;border-radius:var(--r-md);padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:#3182ce;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">✦ Normalisation</div>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Le masque n'est pas votre ennemi. Il a cherché à vous protéger. Remercier sa protection tout en lui montrant qu'elle n'est plus nécessaire — c'est l'unification.</p>
+      </div>
+      <div class="gold-divider" style="margin:14px 0;"></div>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:var(--r-md);padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">→ La promesse</div>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Voici comment transformer la guerre intérieure en paix — et cette paix en force.</p>
+      </div>
+    </div>
+
+    <!-- EXERCICES -->
+    <div class="glass-card animate-in-3" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:16px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">🎯 EXERCICES PRATIQUES</div>
+
+      
+      <div class="exercise-card" style="margin-bottom:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div class="exercise-number" style="background:linear-gradient(135deg,#3182ce,#3182ce99);">1</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Lettre de Réconciliation</div>
+            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Écrivez une lettre à votre masque le plus actif. Remerciez-le pour sa protection passée. Expliquez-lui que vous avez de nouvelles ressources maintenant. Dites-lui qu'il peut se reposer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise-card" style="margin-bottom:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div class="exercise-number" style="background:linear-gradient(135deg,#3182ce,#3182ce99);">2</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">Le Pacte des Parties</div>
+            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Formulez un accord : 'Ma part [désir] peut s'exprimer dans [contexte précis], et ma part [protection] sera rassurée parce que [garantie concrète].'</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise-card" style="margin-bottom:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div class="exercise-number" style="background:linear-gradient(135deg,#3182ce,#3182ce99);">3</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Visualisation d'Intégration</div>
+            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Fermez les yeux. Visualisez vos deux parties qui se font face. Laissez-les se parler, puis se rapprocher. Observez ce qui se passe quand elles s'unissent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JOURNAL INVITATION -->
+    <div class="glass-card" style="background:#3182ce06;border-color:#3182ce33;text-align:center;padding:24px;margin-bottom:16px;">
+      <div style="font-size:36px;margin-bottom:12px;">📓</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text-bright);margin-bottom:8px;">Ancrez dans votre journal</div>
+      <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto 16px;">Après avoir pratiqué les exercices, utilisez la méthode V.A.L.E.U.R© complète dans votre journal pour ancrer la transformation.</p>
+      <button onclick="VALEUR_JOURNAL.open()" class="btn-glass" style="border-color:#3182ce44;color:#3182ce;">
+        Ouvrir le journal →
+      </button>
+    </div>
+
+    <!-- COMPLETE BUTTON -->
+    <button class="complete-btn" id="complete-btn" onclick="completeModule()">
+      ✨ Module UNIFIER complété — Continuer →
+    </button>
+
+    <!-- NAVIGATION -->
+    <div style="display:flex;gap:12px;">
+      <a href="module4.html" class="btn-ghost" style="flex:1;text-align:center;text-decoration:none;">← Module 4</a>
+      <a href="module6.html" class="btn-primary" id="next-btn" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0.5;pointer-events:none;" aria-disabled="true">
+        Module 6 — RENFORCER →
+      </a>
+    </div>
+
+    <footer class="copyright-footer">
+      © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
+      Tous droits réservés. Reproduction et diffusion interdites.
+    </footer>
+  </main>
+
+  <script src="assets/js/journal-manager.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      VALEUR_PROGRESS.render('module5');
+      const done = VALEUR_PROGRESS.isDone('module5');
+      if (done) {
+        const btn = document.getElementById('complete-btn');
+        if (btn) { btn.textContent = '✅ Module complété'; btn.disabled = true; }
+        const next = document.getElementById('next-btn');
+        if (next) { next.style.opacity = '1'; next.style.pointerEvents = 'auto'; }
+      }
+    });
+
+    function completeModule() {
+      VALEUR_PROGRESS.complete('module5');
+      const btn = document.getElementById('complete-btn');
+      if (btn) { btn.textContent = '✅ Module complété !'; btn.disabled = true; }
+      const next = document.getElementById('next-btn');
+      if (next) { next.style.opacity = '1'; next.style.pointerEvents = 'auto'; }
+      VALEUR_JOURNAL.showConfetti();
+      VALEUR_JOURNAL.showToast('🎉 Module UNIFIER complété !');
+      VALEUR_PROGRESS.render('module5');
+      setTimeout(() => {
+        window.location.href = 'module6.html';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

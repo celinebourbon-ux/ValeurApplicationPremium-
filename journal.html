@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>Journal V.A.L.E.U.R©</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/design-system.css"/>
+  <script src="valeur-config.js"></script>
+  <style>
+    .entry-card {
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--r-lg);
+      padding:18px;
+      margin-bottom:10px;
+      transition:all var(--t-mid);
+    }
+    .entry-card:hover { border-color:var(--glass-border-2); }
+    .entry-date {
+      font-size:11px; color:var(--text-dim); letter-spacing:0.5px; margin-bottom:8px;
+    }
+    .entry-masque-tag {
+      display:inline-flex; align-items:center; gap:6px;
+      border-radius:20px; padding:3px 10px;
+      font-size:11px; font-weight:600;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      margin-bottom:10px;
+    }
+    .entry-steps { display:flex; flex-direction:column; gap:6px; }
+    .entry-step-row { display:flex; gap:10px; align-items:flex-start; }
+    .entry-step-letter {
+      width:22px; height:22px; border-radius:6px;
+      background:linear-gradient(135deg,var(--gold),#e8c060);
+      color:#0a0f1a; font-size:11px; font-weight:800;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; font-family:'Cormorant Garamond',serif;
+    }
+    .entry-step-val { font-size:13px; color:var(--text-muted); line-height:1.6; }
+    .empty-state {
+      text-align:center; padding:60px 20px;
+    }
+    .empty-icon { font-size:64px; margin-bottom:16px; opacity:0.6; }
+    .tab-bar {
+      display:flex; gap:8px; margin-bottom:24px;
+    }
+    .tab-btn {
+      flex:1; padding:10px;
+      background:var(--glass-bg); border:1px solid var(--glass-border);
+      border-radius:var(--r-md); color:var(--text-muted);
+      font-family:'Jost',sans-serif; font-size:13px; font-weight:600;
+      cursor:pointer; transition:all var(--t-fast);
+    }
+    .tab-btn.active {
+      background:var(--glass-bg-2); border-color:var(--border-gold);
+      color:var(--gold);
+    }
+    .tab-content { display:none; }
+    .tab-content.active { display:block; }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+
+  <header class="glass-header">
+    <a href="index.html" style="background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:18px;padding:4px 8px;line-height:1;text-decoration:none;">←</a>
+    <div class="header-logo">Journal V.A.L.E.U.R©</div>
+    <div class="header-spacer"></div>
+    <div style="font-size:12px;color:var(--text-dim);" id="journal-count-header">0 entrées</div>
+  </header>
+
+  <div id="valeur-progress-bar"></div>
+
+  <main class="page-content">
+    <div class="animate-in" style="text-align:center;margin-bottom:24px;">
+      <div class="label-gold" style="margin-bottom:12px;">📓 MON JOURNAL INTIME</div>
+      <h1 class="display-title" style="font-size:clamp(24px,5vw,36px);">
+        Chaque entrée<br/>est une <em>victoire</em>
+      </h1>
+      <p class="text-muted" style="font-size:13px;max-width:360px;margin:12px auto 0;">
+        Votre journal V.A.L.E.U.R© trace votre transformation. Chaque observation vous rapproche de votre nature authentique.
+      </p>
+    </div>
+
+    <!-- NEW ENTRY FORM -->
+    <div class="glass-card glass-card-gold animate-in-2" style="margin-bottom:24px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+        <div>
+          <div class="label-gold" style="margin-bottom:6px;">✏️ NOUVELLE ENTRÉE</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text-bright);">Traverser un masque en 6 étapes</div>
+        </div>
+      </div>
+
+      <!-- MASQUE SELECTOR -->
+      <div style="margin-bottom:16px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Masque actif aujourd'hui (optionnel)</div>
+        <div class="masque-grid" id="form-masque-selector">
+          <button class="masque-chip" data-masque="rouge" style="color:#e53e3e;" title="Masque Rouge">🔴<div class="masque-chip-dot" style="background:#e53e3e;"></div></button>
+          <button class="masque-chip" data-masque="orange" style="color:#ed8936;" title="Masque Orange">🟠<div class="masque-chip-dot" style="background:#ed8936;"></div></button>
+          <button class="masque-chip" data-masque="jaune" style="color:#d69e2e;" title="Masque Jaune">🟡<div class="masque-chip-dot" style="background:#d69e2e;"></div></button>
+          <button class="masque-chip" data-masque="vert" style="color:#38a169;" title="Masque Vert">🟢<div class="masque-chip-dot" style="background:#38a169;"></div></button>
+          <button class="masque-chip" data-masque="bleu" style="color:#3182ce;" title="Masque Bleu">🔵<div class="masque-chip-dot" style="background:#3182ce;"></div></button>
+          <button class="masque-chip" data-masque="indigo" style="color:#5a67d8;" title="Masque Indigo">🔷<div class="masque-chip-dot" style="background:#5a67d8;"></div></button>
+          <button class="masque-chip" data-masque="violet" style="color:#805ad5;" title="Masque Violet">💜<div class="masque-chip-dot" style="background:#805ad5;"></div></button>
+        </div>
+        <div id="form-masque-label" style="text-align:center;font-size:12px;color:var(--text-dim);margin-top:8px;min-height:18px;transition:color 0.2s;"></div>
+      </div>
+
+      <div class="gold-divider" style="margin:16px 0;"></div>
+
+      <!-- VALEUR STEPS -->
+      <div id="form-steps">
+        <!-- V -->
+        <div class="journal-step" data-step="0">
+          <div class="journal-step-header">
+            <div class="journal-letter">V</div>
+            <div>
+              <div class="journal-label">VOIR</div>
+              <div class="journal-sublabel">Quel masque est actif ? Quel est le déclencheur précis ?</div>
+            </div>
+          </div>
+          <textarea class="journal-textarea" id="step-V" placeholder="Ex: Mon masque vert s'est activé quand mon ami n'a pas répondu à mes messages..." rows="3"></textarea>
+        </div>
+        <!-- A -->
+        <div class="journal-step" data-step="1">
+          <div class="journal-step-header">
+            <div class="journal-letter">A</div>
+            <div>
+              <div class="journal-label">ACCUEILLIR</div>
+              <div class="journal-sublabel">Quelle émotion est présente ? Accueillez-la sans la fuir.</div>
+            </div>
+          </div>
+          <textarea class="journal-textarea" id="step-A" placeholder="Ex: Je ressens une anxiété intense dans ma poitrine, une peur d'être rejeté(e)..." rows="3"></textarea>
+        </div>
+        <!-- L -->
+        <div class="journal-step" data-step="2">
+          <div class="journal-step-header">
+            <div class="journal-letter">L</div>
+            <div>
+              <div class="journal-label">LOCALISER</div>
+              <div class="journal-sublabel">Où ressentez-vous cela dans votre corps ?</div>
+            </div>
+          </div>
+          <textarea class="journal-textarea" id="step-L" placeholder="Ex: Tension dans la gorge, serrement dans la poitrine, crispation des épaules..." rows="3"></textarea>
+        </div>
+        <!-- E -->
+        <div class="journal-step" data-step="3">
+          <div class="journal-step-header">
+            <div class="journal-letter">E</div>
+            <div>
+              <div class="journal-label">EXPLORER</div>
+              <div class="journal-sublabel">Quel conflit intérieur existe ? "Une part de moi voudrait... mais une autre..."</div>
+            </div>
+          </div>
+          <textarea class="journal-textarea" id="step-E" placeholder="Ex: Une part de moi voudrait cette relation proche, mais une autre a encore plus peur d'être rejetée et de souffrir..." rows="4"></textarea>
+        </div>
+        <!-- U -->
+        <div class="journal-step" data-step="4">
+          <div class="journal-step-header">
+            <div class="journal-letter">U</div>
+            <div>
+              <div class="journal-label">UNIFIER</div>
+              <div class="journal-sublabel">Comment réconcilier ces deux parts de vous ?</div>
+            </div>
+          </div>
+          <textarea class="journal-textarea" id="step-U" placeholder="Ex: Je peux désirer la connexion ET reconnaître la peur. Les deux sont valides. Je n'ai pas à choisir..." rows="3"></textarea>
+        </div>
+        <!-- R -->
+        <div class="journal-step" data-step="5">
+          <div class="journal-step-header">
+            <div class="journal-letter">R</div>
+            <div>
+              <div class="journal-label">RENFORCER</div>
+              <div class="journal-sublabel">Quelle nouvelle action choisissez-vous ? Quelle posture nouvelle ?</div>
+            </div>
+          </div>
+          <textarea class="journal-textarea" id="step-R" placeholder="Ex: Je choisis d'envoyer un message direct plutôt que d'attendre dans l'anxiété. Je reprends le pouvoir..." rows="3"></textarea>
+        </div>
+      </div>
+
+      <button id="form-save-btn" class="btn-primary" style="width:100%;margin-top:20px;font-size:16px;padding:16px;">
+        ✨ Enregistrer dans mon journal
+      </button>
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- HISTORY SECTION -->
+    <div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+        <div class="label-gold">🗓️ HISTORIQUE</div>
+        <span id="entries-count" style="font-size:12px;color:var(--text-dim);">0 entrées</span>
+      </div>
+
+      <div id="entries-list">
+        <div class="empty-state">
+          <div class="empty-icon">🌱</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text-bright);margin-bottom:8px;">Votre journal commence ici</div>
+          <p class="text-muted" style="font-size:13px;max-width:280px;margin:0 auto;">Chaque entrée est un pas vers votre nature authentique.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="copyright-footer">
+      © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
+      Tous droits réservés. Reproduction et diffusion interdites.
+    </footer>
+  </main>
+
+  <script src="assets/js/journal-manager.js"></script>
+  <script>
+    const MASQUES_MAP = {
+      rouge:  { color:'#e53e3e', label:'Masque Rouge',  emoji:'🔴' },
+      orange: { color:'#ed8936', label:'Masque Orange', emoji:'🟠' },
+      jaune:  { color:'#d69e2e', label:'Masque Jaune',  emoji:'🟡' },
+      vert:   { color:'#38a169', label:'Masque Vert',   emoji:'🟢' },
+      bleu:   { color:'#3182ce', label:'Masque Bleu',   emoji:'🔵' },
+      indigo: { color:'#5a67d8', label:'Masque Indigo', emoji:'🔷' },
+      violet: { color:'#805ad5', label:'Masque Violet', emoji:'💜' },
+    };
+
+    let selectedMasque = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      VALEUR_PROGRESS.render('journal');
+      renderEntries();
+      updateCount();
+
+      // Masque chips
+      document.querySelectorAll('#form-masque-selector .masque-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          document.querySelectorAll('#form-masque-selector .masque-chip').forEach(c => c.classList.remove('selected'));
+          chip.classList.add('selected');
+          selectedMasque = chip.dataset.masque;
+          const m = MASQUES_MAP[selectedMasque];
+          const lbl = document.getElementById('form-masque-label');
+          if (lbl && m) { lbl.textContent = m.label; lbl.style.color = m.color; }
+        });
+      });
+
+      // Step focus
+      document.querySelectorAll('.journal-step').forEach(step => {
+        const ta = step.querySelector('.journal-textarea');
+        if (ta) ta.addEventListener('focus', () => {
+          document.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
+          step.classList.add('active');
+        });
+      });
+
+      // Save
+      document.getElementById('form-save-btn').addEventListener('click', saveJournalEntry);
+
+      window.addEventListener('valeur:journal-updated', () => {
+        renderEntries();
+        updateCount();
+      });
+    });
+
+    function saveJournalEntry() {
+      const steps = {};
+      ['V','A','L','E','U','R'].forEach(l => {
+        const el = document.getElementById('step-' + l);
+        steps[l] = el ? el.value.trim() : '';
+      });
+      const hasContent = Object.values(steps).some(v => v.length > 0);
+      if (!hasContent && !selectedMasque) {
+        VALEUR_JOURNAL.showToast('Remplissez au moins un champ 🌱');
+        return;
+      }
+      const entry = { id:Date.now(), date:new Date().toISOString(), masque:selectedMasque, steps };
+      VALEUR_JOURNAL.saveEntry(entry);
+
+      // Reset
+      ['V','A','L','E','U','R'].forEach(l => {
+        const el = document.getElementById('step-' + l);
+        if (el) el.value = '';
+      });
+      document.querySelectorAll('#form-masque-selector .masque-chip').forEach(c => c.classList.remove('selected'));
+      const lbl = document.getElementById('form-masque-label');
+      if (lbl) { lbl.textContent = ''; lbl.style.color = 'var(--text-dim)'; }
+      selectedMasque = null;
+      document.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
+
+      VALEUR_JOURNAL.showConfetti();
+      VALEUR_JOURNAL.showToast('✨ Journal enregistré !');
+
+      // Scroll to history
+      document.getElementById('entries-list').scrollIntoView({ behavior:'smooth', block:'start' });
+    }
+
+    function updateCount() {
+      const entries = VALEUR_JOURNAL.getEntries();
+      const txt = entries.length + ' entrée' + (entries.length !== 1 ? 's' : '');
+      ['journal-count-header','entries-count'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = txt;
+      });
+    }
+
+    function renderEntries() {
+      const list = document.getElementById('entries-list');
+      if (!list) return;
+      const entries = VALEUR_JOURNAL.getEntries();
+      if (!entries.length) {
+        list.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">🌱</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text-bright);margin-bottom:8px;">Votre journal commence ici</div>
+            <p class="text-muted" style="font-size:13px;max-width:280px;margin:0 auto;">Chaque entrée est un pas vers votre nature authentique.</p>
+          </div>`;
+        return;
+      }
+      list.innerHTML = entries.map(e => {
+        const masque = e.masque ? MASQUES_MAP[e.masque] : null;
+        const date = new Date(e.date);
+        const dateStr = date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}) + ' · ' +
+          date.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+        const stepsHtml = Object.entries(e.steps||{}).filter(([,v])=>v).map(([l,v]) => `
+          <div class="entry-step-row">
+            <div class="entry-step-letter">${l}</div>
+            <div class="entry-step-val">${escapeHtml(v)}</div>
+          </div>
+        `).join('');
+        return `
+          <div class="entry-card" style="animation:fadeInUp 0.4s var(--ease-spring) both;">
+            <div class="entry-date">${dateStr}</div>
+            ${masque ? `<div class="entry-masque-tag" style="color:${masque.color};border-color:${masque.color}33;">${masque.emoji} ${masque.label}</div>` : ''}
+            <div class="entry-steps">${stepsHtml || '<div class="entry-step-val" style="color:var(--text-dim);font-style:italic;">Entrée vide</div>'}</div>
+          </div>`;
+      }).join('');
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br/>');
+    }
+  </script>
+</body>
+</html>

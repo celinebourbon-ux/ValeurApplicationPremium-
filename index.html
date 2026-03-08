@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <meta name="description" content="Méthode V.A.L.E.U.R© — Parcours de libération des 7 peurs universelles"/>
+  <title>V.A.L.E.U.R© — Tableau de Bord</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/design-system.css"/>
+
+  <!-- valeur-config -->
+  <script src="valeur-config.js"></script>
+
+  <style>
+    /* ── HERO GRADIENT ─────────────────────────────────────────── */
+    .hero-section {
+      text-align:center;
+      padding:32px 0 24px;
+    }
+    .hero-eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      color:var(--gold);
+      border:1px solid var(--border-gold);
+      padding:5px 16px;
+      border-radius:20px;
+      background:rgba(201,168,76,0.06);
+      margin-bottom:20px;
+    }
+    .nature-badge {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:var(--r-xl);
+      padding:14px 24px;
+      margin:24px 0 16px;
+    }
+    .nature-progress-ring {
+      position:relative;
+      width:52px; height:52px;
+      flex-shrink:0;
+    }
+    .nature-progress-ring svg { transform:rotate(-90deg); }
+    .nature-pct-text {
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:'Cormorant Garamond',serif;
+      font-size:15px;
+      font-weight:700;
+      color:var(--gold);
+    }
+    .nature-label {
+      text-align:left;
+    }
+    .nature-label-title {
+      font-size:14px;
+      font-weight:700;
+      color:var(--text-bright);
+      margin-bottom:2px;
+    }
+    .nature-label-sub {
+      font-size:11px;
+      color:var(--text-muted);
+    }
+    /* ── CARTE CONTAINER ─────────────────────────────────────── */
+    .carte-section {
+      margin:24px 0;
+    }
+    .carte-wrapper {
+      position:relative;
+      max-width:320px;
+      margin:0 auto;
+      padding:24px;
+    }
+    .carte-legend {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin-top:16px;
+    }
+    .legend-item {
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--r-sm);
+      cursor:pointer;
+      transition:all var(--t-fast);
+      text-decoration:none;
+    }
+    .legend-item:hover {
+      border-color:var(--glass-border-2);
+      background:var(--glass-bg-2);
+    }
+    .legend-dot {
+      width:10px; height:10px;
+      border-radius:50%;
+      flex-shrink:0;
+    }
+    .legend-text { font-size:11px; color:var(--text-muted); }
+    .legend-text strong { display:block; font-size:12px; color:var(--text-main); font-weight:600; }
+    /* ── QUESTIONNAIRE CTA ────────────────────────────────────── */
+    .questionnaire-cta {
+      background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.04));
+      border:1px solid var(--border-gold);
+      border-radius:var(--r-xl);
+      padding:28px 24px;
+      text-align:center;
+      margin:24px 0;
+      position:relative;
+      overflow:hidden;
+    }
+    .questionnaire-cta::before {
+      content:'';
+      position:absolute;
+      top:-50%; left:-50%;
+      width:200%; height:200%;
+      background:radial-gradient(ellipse 40% 40% at 50% 50%,rgba(201,168,76,0.08),transparent);
+      pointer-events:none;
+    }
+    /* ── MODULE GRID ─────────────────────────────────────────── */
+    .modules-grid {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .module-0-card {
+      grid-column:1/-1;
+    }
+    @media(max-width:400px) {
+      .modules-grid { grid-template-columns:1fr; }
+      .module-0-card { grid-column:auto; }
+      .carte-legend { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+
+  <!-- STICKY HEADER -->
+  <header class="glass-header">
+    <div class="header-logo">V.A.L.E.U.R©</div>
+    <div class="header-subtitle">Méthode Céline Bourbon</div>
+    <div class="header-spacer"></div>
+    <button onclick="VALEUR_JOURNAL.open()" style="background:none;border:1px solid var(--border-gold);border-radius:20px;padding:5px 14px;color:var(--gold);font-size:12px;font-weight:600;cursor:pointer;font-family:'Jost',sans-serif;display:flex;align-items:center;gap:6px;">
+      📓 Journal
+    </button>
+  </header>
+
+  <!-- PROGRESS BAR -->
+  <div id="valeur-progress-bar"></div>
+
+  <main class="page-content">
+
+    <!-- HERO -->
+    <section class="hero-section animate-in">
+      <div class="hero-eyebrow">✦ Parcours de Libération ✦</div>
+      <h1 class="display-title">
+        Les <em>7 peurs</em><br/>qui empêchent<br/>d'être soi
+      </h1>
+      <p class="text-muted" style="max-width:440px;margin:16px auto 0;font-size:14px;">
+        Cartographiez vos défenses, traversez vos masques, révélez votre nature authentique.
+      </p>
+
+      <!-- NATURE AUTHENTIQUE PROGRESS -->
+      <div class="nature-badge animate-in-2" id="nature-badge">
+        <div class="nature-progress-ring">
+          <svg width="52" height="52" viewBox="0 0 52 52">
+            <circle cx="26" cy="26" r="21" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3"/>
+            <circle id="nature-ring-progress" cx="26" cy="26" r="21" fill="none"
+              stroke="#c9a84c" stroke-width="3"
+              stroke-dasharray="131.9" stroke-dashoffset="131.9"
+              stroke-linecap="round"
+              style="transition:stroke-dashoffset 1s cubic-bezier(0.34,1.56,0.64,1) 0.5s;"/>
+          </svg>
+          <div class="nature-pct-text" id="nature-pct-display">0%</div>
+        </div>
+        <div class="nature-label">
+          <div class="nature-label-title">Nature Authentique</div>
+          <div class="nature-label-sub" id="nature-phase-text">Commencez votre parcours</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider animate-in-2"></div>
+
+    <!-- CARTE DES 7 MASQUES -->
+    <section class="carte-section animate-in-3">
+      <div style="text-align:center;margin-bottom:16px;">
+        <div class="label-gold" style="margin-bottom:10px;">🗺️ VOTRE CARTE INTÉRIEURE</div>
+        <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto;">Les 7 cercles représentent vos masques. Plus vous avancez, plus la lumière centrale apparaît.</p>
+      </div>
+
+      <div class="glass-card glass-card-gold carte-wrapper" style="padding:20px;">
+        <div id="carte-masques"></div>
+      </div>
+
+      <!-- Legend -->
+      <div class="carte-legend" style="margin-top:16px;">
+        <a class="legend-item" href="module1.html">
+          <div class="legend-dot" style="background:#e53e3e;box-shadow:0 0 6px #e53e3e88;"></div>
+          <div class="legend-text"><strong>🔴 Rouge</strong>Mort / maladie</div>
+        </a>
+        <a class="legend-item" href="module2.html">
+          <div class="legend-dot" style="background:#ed8936;box-shadow:0 0 6px #ed893688;"></div>
+          <div class="legend-text"><strong>🟠 Orange</strong>Souffrance psychique</div>
+        </a>
+        <a class="legend-item" href="module3.html">
+          <div class="legend-dot" style="background:#d69e2e;box-shadow:0 0 6px #d69e2e88;"></div>
+          <div class="legend-text"><strong>🟡 Jaune</strong>Inconnu / incertitude</div>
+        </a>
+        <a class="legend-item" href="module4.html">
+          <div class="legend-dot" style="background:#38a169;box-shadow:0 0 6px #38a16988;"></div>
+          <div class="legend-text"><strong>🟢 Vert</strong>Rejet / abandon</div>
+        </a>
+        <a class="legend-item" href="module5.html">
+          <div class="legend-dot" style="background:#3182ce;box-shadow:0 0 6px #3182ce88;"></div>
+          <div class="legend-text"><strong>🔵 Bleu</strong>Impuissance</div>
+        </a>
+        <a class="legend-item" href="module6.html">
+          <div class="legend-dot" style="background:#5a67d8;box-shadow:0 0 6px #5a67d888;"></div>
+          <div class="legend-text"><strong>🔷 Indigo</strong>Échec / inadéquation</div>
+        </a>
+        <a class="legend-item" style="grid-column:1/-1;" href="module7.html">
+          <div class="legend-dot" style="background:#805ad5;box-shadow:0 0 6px #805ad588;"></div>
+          <div class="legend-text"><strong>💜 Violet</strong>Perte d'identité / Faux self</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- QUESTIONNAIRE CTA -->
+    <section class="questionnaire-cta animate-in-4">
+      <div class="label-gold" style="margin:0 auto 16px;width:fit-content;">🔑 LA PORTE D'ENTRÉE</div>
+      <h2 class="section-title" style="font-size:24px;margin-bottom:8px;">Questionnaire V.A.L.E.U.R©</h2>
+      <p class="text-muted" style="font-size:13px;max-width:380px;margin:0 auto 20px;">
+        Cartographiez chirurgicalement vos masques actifs. Une révélation à lui seul — commencez ici si vous ne l'avez pas encore fait.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://celinebourbon-ux.github.io/Questionnaire-Valeur-V4/" target="_blank" rel="noopener" class="btn-primary">
+          🔍 Faire le Questionnaire →
+        </a>
+        <a href="module0.html" class="btn-glass">
+          📚 Module 0 — Comprendre
+        </a>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--text-dim);">Code d'accès : <span style="color:var(--gold);font-weight:700;letter-spacing:2px;">VALEUR2025</span></div>
+    </section>
+
+    <!-- MODULES -->
+    <section style="margin-top:8px;">
+      <div style="text-align:center;margin-bottom:20px;">
+        <div class="label-gold" style="margin-bottom:10px;">📚 VOS MODULES</div>
+        <h2 class="section-title" style="font-size:22px;margin-bottom:4px;">Le Parcours V.A.L.E.U.R©</h2>
+        <p class="text-muted" style="font-size:13px;">6 étapes de transformation. À votre rythme.</p>
+      </div>
+
+      <div class="modules-grid" id="modules-grid">
+        <!-- Module 0 -->
+        <a href="module0.html" class="module-card module-0-card animate-in-2" style="--module-color:#c9a84c;--module-color-glow:rgba(201,168,76,0.15)">
+          <div class="module-number">Module 0</div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="font-size:36px;line-height:1;">🧠</div>
+            <div>
+              <div class="module-name">COMPRENDRE</div>
+              <div class="module-desc">Psychoéducation — L'anxiété, les 7 peurs, les 7 masques</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="modules-grid" id="valeur-modules-grid" style="margin-top:12px;">
+        <!-- Dynamically populated by JS -->
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section style="margin-top:24px;">
+      <div class="stat-grid">
+        <div class="stat-card animate-in-3">
+          <div class="stat-value" id="stat-journal">0</div>
+          <div class="stat-label">Entrées journal</div>
+        </div>
+        <div class="stat-card animate-in-3">
+          <div class="stat-value" id="stat-modules">0/6</div>
+          <div class="stat-label">Modules complétés</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COPYRIGHT FOOTER -->
+    <footer class="copyright-footer">
+      © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
+      Tous droits réservés. Reproduction et diffusion interdites.<br/>
+      Contactez l'administrateur pour toute question.
+    </footer>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/journal-manager.js"></script>
+  <script src="assets/js/carte-masques.js"></script>
+  <script>
+    /* ── INIT DASHBOARD ──────────────────────────────────────── */
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Progress bar
+      VALEUR_PROGRESS.render('home');
+
+      // Nature Authentique ring
+      const pct = VALEUR_PROGRESS.getPercent();
+      const circumference = 2 * Math.PI * 21;
+      const ring = document.getElementById('nature-ring-progress');
+      const pctDisplay = document.getElementById('nature-pct-display');
+      const phaseText = document.getElementById('nature-phase-text');
+
+      setTimeout(() => {
+        if (ring) ring.style.strokeDashoffset = circumference * (1 - pct/100);
+        if (pctDisplay) pctDisplay.textContent = pct + '%';
+      }, 100);
+
+      const phases = [
+        [0,  'Commencez votre parcours'],
+        [17, 'Module 1 en cours — VOIR'],
+        [34, 'Module 2 — ACCUEILLIR'],
+        [50, 'Mi-parcours — LOCALISER'],
+        [67, 'Module 4 — EXPLORER'],
+        [84, 'Presque là — UNIFIER'],
+        [100,'Parcours complété 🌟'],
+      ];
+      const phase = phases.reverse().find(([p]) => pct >= p);
+      if (phaseText && phase) phaseText.textContent = phase[1];
+
+      // Build VALEUR modules grid
+      const grid = document.getElementById('valeur-modules-grid');
+      if (grid) {
+        MODULES_DEF.forEach((mod, i) => {
+          const isDone = VALEUR_PROGRESS.isDone(mod.key);
+          const card = document.createElement('a');
+          card.href = MODULE_URLS[mod.key];
+          card.className = 'module-card animate-in-' + Math.min(i+2, 5) + (isDone?' done':'');
+          card.style.cssText = `--module-color:${mod.color};--module-color-glow:${mod.color}22;`;
+          card.innerHTML = `
+            <div class="module-number">Module ${i+1}</div>
+            <div class="module-letter">${mod.letter}</div>
+            <div class="module-name">${mod.name}</div>
+            <div class="module-desc">${getModuleDesc(mod.key)}</div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      // Stats
+      const journalStats = window.VALEUR_JOURNAL ? VALEUR_JOURNAL.getStats() : { total: 0 };
+      const moduleDone = MODULES_DEF.filter(m => VALEUR_PROGRESS.isDone(m.key)).length;
+      const statJournal = document.getElementById('stat-journal');
+      const statModules = document.getElementById('stat-modules');
+      if (statJournal) statJournal.textContent = journalStats.total;
+      if (statModules) statModules.textContent = moduleDone + '/6';
+
+      // Update stats when journal changes
+      window.addEventListener('valeur:journal-updated', function(e) {
+        if (statJournal) statJournal.textContent = e.detail.entries.length;
+      });
+    });
+
+    function getModuleDesc(key) {
+      const descs = {
+        module1: 'Identifier le masque actif et son déclencheur',
+        module2: 'Recevoir l\'émotion sans la fuir',
+        module3: 'Trouver où ça se manifeste dans le corps',
+        module4: 'Explorer le conflit entre nature et peur',
+        module5: 'Réconcilier les parties en conflit',
+        module6: 'Ancrer de nouveaux comportements choisis',
+      };
+      return descs[key] || '';
+    }
+  </script>
+</body>
+</html>

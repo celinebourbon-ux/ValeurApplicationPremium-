@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>Module 0 — Comprendre · V.A.L.E.U.R©</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/design-system.css"/>
+  <script src="valeur-config.js"></script>
+  <style>
+    :root { --module-color:#c9a84c; --module-color-glow:rgba(201,168,76,0.15); }
+    .masque-row {
+      display:flex; align-items:center; gap:14px;
+      padding:14px 18px; margin-bottom:8px;
+      background:var(--glass-bg); border:1px solid var(--glass-border);
+      border-radius:var(--r-lg); transition:all var(--t-fast); text-decoration:none;
+    }
+    .masque-row:hover { border-color:var(--glass-border-2); transform:translateX(4px); }
+    .masque-row-dot {
+      width:14px; height:14px; border-radius:50%; flex-shrink:0;
+    }
+    .masque-row-label { font-weight:700; font-size:14px; color:var(--text-bright); }
+    .masque-row-peur { font-size:12px; color:var(--text-muted); }
+    .masque-row-emoji { font-size:22px; }
+    .info-box {
+      background:rgba(201,168,76,0.06); border:1px solid var(--border-gold);
+      border-radius:var(--r-lg); padding:18px; margin-bottom:16px;
+    }
+    .quote-block {
+      border-left:3px solid var(--gold); padding:14px 18px;
+      background:rgba(201,168,76,0.04); border-radius:0 var(--r-md) var(--r-md) 0;
+      margin:16px 0;
+    }
+    .quote-block p { font-family:'Cormorant Garamond',serif; font-size:17px; font-style:italic; color:var(--text-bright); line-height:1.7; margin:0; }
+    .science-badge {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(49,130,206,0.08); border:1px solid rgba(49,130,206,0.25);
+      border-radius:20px; padding:4px 12px;
+      font-size:11px; font-weight:600; color:#90cdf4; letter-spacing:0.5px;
+      margin-right:6px; margin-bottom:6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <header class="glass-header">
+    <a href="index.html" style="color:var(--text-muted);font-size:18px;padding:4px 8px;text-decoration:none;line-height:1;">←</a>
+    <div class="header-logo">Module 0</div>
+    <div class="header-subtitle">COMPRENDRE</div>
+    <div class="header-spacer"></div>
+    <a href="journal.html" style="background:none;border:1px solid var(--border-gold);border-radius:20px;padding:5px 14px;color:var(--gold);font-size:12px;font-weight:600;cursor:pointer;font-family:'Jost',sans-serif;text-decoration:none;">📓 Journal</a>
+  </header>
+  <div id="valeur-progress-bar"></div>
+
+  <main class="page-content">
+
+    <!-- HERO MODULE -->
+    <div class="module-hero glass-card" style="background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.02));" >
+      <div class="label-gold" style="margin-bottom:14px;">📚 MODULE 0</div>
+      <h1 class="display-title" style="font-size:clamp(26px,5vw,40px);margin-bottom:12px;">
+        Comprendre <em>votre anxiété</em>
+      </h1>
+      <p class="text-muted" style="font-size:14px;max-width:440px;line-height:1.8;">
+        Avant de transformer quoi que ce soit, il faut comprendre. Votre anxiété n'est pas un défaut — c'est une <strong style="color:var(--text-bright);">stratégie de survie devenue inutile.</strong>
+      </p>
+    </div>
+
+    <!-- L'ACCROCHE -->
+    <div class="glass-card animate-in" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:14px;">💡 LE POINT DE DÉPART</div>
+      <div class="quote-block">
+        <p>"Et si votre anxiété n'était pas un problème, mais une peur déguisée ?"</p>
+      </div>
+      <p class="text-muted" style="font-size:14px;line-height:1.8;">
+        Vous vous adaptez à tout le monde sauf à vous-même ? Vous savez exactement ce que vous devriez faire… mais vous ne le faites pas ? Vous avez l'impression de jouer un rôle dans votre propre vie ?
+      </p>
+      <div class="gold-divider" style="margin:16px 0;"></div>
+      <p class="text-muted" style="font-size:14px;line-height:1.8;">
+        Ce n'est pas une pathologie. Ce n'est pas un manque de volonté. C'est un <strong style="color:var(--text-bright);">masque de protection</strong> — une réponse naturelle à une peur universelle que vous portez en vous.
+      </p>
+    </div>
+
+    <!-- D'OÙ VIENT L'ANXIÉTÉ -->
+    <div class="glass-card animate-in-2" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:14px;">🧠 D'OÙ VIENT L'ANXIÉTÉ ?</div>
+      <p class="text-muted" style="font-size:14px;line-height:1.8;margin-bottom:16px;">
+        L'anxiété n'est pas une maladie mentale. C'est une réponse du système nerveux autonome à une <strong style="color:var(--text-bright);">menace perçue</strong>. Notre cerveau reptilien ne distingue pas la vraie menace de la peur imaginée.
+      </p>
+      <div class="info-box">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--text-bright);margin-bottom:10px;">La biologie de la peur</div>
+        <div class="step-item">
+          <div class="step-dot" style="background:var(--rouge);box-shadow:0 0 6px #e53e3e;"></div>
+          <div><strong style="color:var(--text-bright);">Amygdale active</strong><br/><span style="font-size:13px;color:var(--text-muted);">Détecte la menace et déclenche l'alarme en 80ms</span></div>
+        </div>
+        <div class="step-item">
+          <div class="step-dot" style="background:var(--orange);box-shadow:0 0 6px #ed8936;"></div>
+          <div><strong style="color:var(--text-bright);">Système nerveux sympathique</strong><br/><span style="font-size:13px;color:var(--text-muted);">Cortisol + adrénaline → combat / fuite / sidération</span></div>
+        </div>
+        <div class="step-item" style="border:none;">
+          <div class="step-dot" style="background:var(--vert);box-shadow:0 0 6px #38a169;"></div>
+          <div><strong style="color:var(--text-bright);">Le masque s'active</strong><br/><span style="font-size:13px;color:var(--text-muted);">La stratégie de survie prend le contrôle — vous devenez le masque</span></div>
+        </div>
+      </div>
+      <p class="text-muted" style="font-size:13px;line-height:1.7;margin-top:12px;">
+        Référence scientifique : Basé sur "De la peur à la joie d'être soi" — Céline Bourbon (L'Harmattan). Fondements : SHAI, TAS-20, IUS-12, ECR-R, LOC+NPI, FMPS, MSI.
+      </p>
+      <div style="margin-top:10px;">
+        <span class="science-badge">📊 SHAI</span>
+        <span class="science-badge">🔬 TAS-20</span>
+        <span class="science-badge">📈 IUS-12</span>
+        <span class="science-badge">💞 ECR-R</span>
+        <span class="science-badge">🎯 LOC</span>
+        <span class="science-badge">⚡ FMPS</span>
+        <span class="science-badge">🧩 MSI</span>
+      </div>
+    </div>
+
+    <!-- LES 7 MASQUES -->
+    <div class="glass-card animate-in-3" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:14px;">🎭 LES 7 MASQUES</div>
+      <p class="text-muted" style="font-size:14px;line-height:1.7;margin-bottom:18px;">
+        Chaque masque est une <strong style="color:var(--text-bright);">protection émotionnelle</strong> construite autour d'une peur universelle. Tous les êtres humains portent ces 7 masques — à des degrés différents.
+      </p>
+
+      <a class="masque-row" href="module1.html">
+        <div class="masque-row-emoji">🔴</div>
+        <div class="masque-row-dot" style="background:#e53e3e;box-shadow:0 0 8px #e53e3e88;"></div>
+        <div><div class="masque-row-label">Masque Rouge</div><div class="masque-row-peur">Peur : Mort / maladie → Hypervigilance somatique</div></div>
+      </a>
+      <a class="masque-row" href="module2.html">
+        <div class="masque-row-emoji">🟠</div>
+        <div class="masque-row-dot" style="background:#ed8936;box-shadow:0 0 8px #ed893688;"></div>
+        <div><div class="masque-row-label">Masque Orange</div><div class="masque-row-peur">Peur : Souffrance psychique → Évitement émotionnel</div></div>
+      </a>
+      <a class="masque-row" href="module3.html">
+        <div class="masque-row-emoji">🟡</div>
+        <div class="masque-row-dot" style="background:#d69e2e;box-shadow:0 0 8px #d69e2e88;"></div>
+        <div><div class="masque-row-label">Masque Jaune</div><div class="masque-row-peur">Peur : Inconnu / incertitude → Obsession de contrôle</div></div>
+      </a>
+      <a class="masque-row" href="module4.html">
+        <div class="masque-row-emoji">🟢</div>
+        <div class="masque-row-dot" style="background:#38a169;box-shadow:0 0 8px #38a16988;"></div>
+        <div><div class="masque-row-label">Masque Vert</div><div class="masque-row-peur">Peur : Rejet / abandon → Insécurité relationnelle</div></div>
+      </a>
+      <a class="masque-row" href="module5.html">
+        <div class="masque-row-emoji">🔵</div>
+        <div class="masque-row-dot" style="background:#3182ce;box-shadow:0 0 8px #3182ce88;"></div>
+        <div><div class="masque-row-label">Masque Bleu</div><div class="masque-row-peur">Peur : Impuissance → Hypercontrôle relationnel</div></div>
+      </a>
+      <a class="masque-row" href="module6.html">
+        <div class="masque-row-emoji">🔷</div>
+        <div class="masque-row-dot" style="background:#5a67d8;box-shadow:0 0 8px #5a67d888;"></div>
+        <div><div class="masque-row-label">Masque Indigo</div><div class="masque-row-peur">Peur : Échec / inadéquation → Anxiété de performance</div></div>
+      </a>
+      <a class="masque-row" href="module7.html">
+        <div class="masque-row-emoji">💜</div>
+        <div class="masque-row-dot" style="background:#805ad5;box-shadow:0 0 8px #805ad588;"></div>
+        <div><div class="masque-row-label">Masque Violet</div><div class="masque-row-peur">Peur : Perte d'identité → Angoisse existentielle / Faux self</div></div>
+      </a>
+    </div>
+
+    <!-- QUESTIONNAIRE CTA -->
+    <div class="glass-card" style="background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.02));border-color:var(--border-gold);text-align:center;padding:28px 24px;margin-bottom:16px;">
+      <div class="label-gold" style="margin:0 auto 14px;width:fit-content;">🔑 ÉTAPE ESSENTIELLE</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text-bright);margin-bottom:10px;">
+        Faites le Questionnaire V.A.L.E.U.R©
+      </div>
+      <p class="text-muted" style="font-size:13px;max-width:360px;margin:0 auto 20px;line-height:1.7;">
+        Avant de commencer les modules, cartographiez chirurgicalement vos masques actifs. C'est la porte d'entrée dans votre transformation.
+      </p>
+      <a href="https://celinebourbon-ux.github.io/Questionnaire-Valeur-V4/" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;">
+        🔍 Faire le Questionnaire →
+      </a>
+      <div style="margin-top:12px;font-size:11px;color:var(--text-dim);">Code d'accès : <span style="color:var(--gold);font-weight:700;letter-spacing:2px;">VALEUR2025</span></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div style="display:flex;gap:12px;margin-top:8px;">
+      <a href="index.html" class="btn-ghost" style="flex:1;text-align:center;text-decoration:none;">← Accueil</a>
+      <a href="module1.html" class="btn-primary" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;">
+        Module 1 — VOIR →
+      </a>
+    </div>
+
+    <footer class="copyright-footer">
+      © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
+      Tous droits réservés. Reproduction et diffusion interdites.
+    </footer>
+  </main>
+
+  <script src="assets/js/journal-manager.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      VALEUR_PROGRESS.render('module0');
+    });
+  </script>
+</body>
+</html>

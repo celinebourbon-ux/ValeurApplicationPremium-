@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>Module 4 — EXPLORER · V.A.L.E.U.R©</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/design-system.css"/>
+  <script src="valeur-config.js"></script>
+  <style>
+    :root {
+      --module-color:#38a169;
+      --module-color-glow:rgba(56,161,105,0.15);
+    }
+    .accroche-box {
+      background:rgba(255,255,255,0.02);
+      border-left:3px solid #38a169;
+      border-radius:0 var(--r-lg) var(--r-lg) 0;
+      padding:18px 20px; margin-bottom:16px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:16px; font-style:italic;
+      color:var(--text-bright); line-height:1.8;
+    }
+    .complete-btn {
+      width:100%; padding:18px;
+      background:linear-gradient(135deg,#38a169,#38a169cc);
+      border:none; border-radius:var(--r-xl);
+      font-family:'Jost',sans-serif;
+      font-size:17px; font-weight:800;
+      color:#fff; cursor:pointer; margin:24px 0 12px;
+      box-shadow:0 4px 24px #38a16955;
+      transition:all 0.3s var(--ease-spring);
+      letter-spacing:0.5px;
+    }
+    .complete-btn:hover { transform:translateY(-2px); box-shadow:0 8px 36px #38a16966; }
+    .complete-btn:disabled {
+      background:linear-gradient(135deg,var(--vert),#2d8a5a);
+      cursor:default; transform:none;
+    }
+    .phase-tag {
+      display:inline-flex; align-items:center; gap:6px;
+      background:#38a16918; border:1px solid #38a16944;
+      border-radius:20px; padding:4px 14px;
+      font-size:11px; font-weight:700;
+      color:#38a169; letter-spacing:1px;
+      text-transform:uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <header class="glass-header">
+    <a href="module3.html" style="color:var(--text-muted);font-size:18px;padding:4px 8px;text-decoration:none;line-height:1;">←</a>
+    <div class="header-logo" style="color:#38a169;">E</div>
+    <div class="header-subtitle">EXPLORER</div>
+    <div class="header-spacer"></div>
+    <button onclick="VALEUR_JOURNAL.open()" style="background:none;border:1px solid var(--border-gold);border-radius:20px;padding:5px 14px;color:var(--gold);font-size:12px;font-weight:600;cursor:pointer;font-family:'Jost',sans-serif;">📓 Journal</button>
+  </header>
+  <div id="valeur-progress-bar"></div>
+
+  <main class="page-content">
+
+    <!-- HERO -->
+    <div class="module-hero glass-card animate-in" style="background:linear-gradient(135deg,rgba(56,161,105,0.15),#38a16905);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div class="phase-tag">MODULE 4</div>
+        <span style="font-size:28px;">🔍</span>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,6vw,46px);font-weight:700;color:#38a169;line-height:1;margin-bottom:10px;letter-spacing:2px;">E</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,32px);font-weight:600;color:var(--text-bright);margin-bottom:8px;">EXPLORER</h1>
+      <p style="font-size:14px;color:var(--text-muted);">Explorer le conflit intérieur</p>
+    </div>
+
+    <!-- ACCROCHE -->
+    <div class="accroche-box animate-in-2">
+      Vous sentez parfois deux forces contradictoires en vous ? Une part qui voudrait avancer et une autre qui freine ? Ce conflit a un nom : c'est la rencontre entre votre nature et votre masque.
+    </div>
+
+    <!-- INTRO -->
+    <div class="glass-card animate-in-2" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#38a16944;color:#38a169;background:#38a16908;">💡 L'ESSENTIEL</div>
+      <p class="text-muted" style="font-size:14px;line-height:1.8;">L'<strong style='color:var(--text-bright)'>EXPLORATION</strong> consiste à dialoguer avec vos parties intérieures. À comprendre le conflit entre ce que vous désirez vraiment et ce que votre masque cherche à éviter.</p>
+      <div class="gold-divider" style="margin:14px 0;"></div>
+      <div style="background:#38a16908;border:1px solid #38a16925;border-radius:var(--r-md);padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:#38a169;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">✦ Normalisation</div>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Ce conflit intérieur est universel. Ce n'est pas de la schizophrénie — c'est la nature humaine. Toute personne a des parties en tension.</p>
+      </div>
+      <div class="gold-divider" style="margin:14px 0;"></div>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:var(--r-md);padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">→ La promesse</div>
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Voici comment transformer ce conflit de combat en dialogue — puis en collaboration.</p>
+      </div>
+    </div>
+
+    <!-- EXERCICES -->
+    <div class="glass-card animate-in-3" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:16px;border-color:#38a16944;color:#38a169;background:#38a16908;">🎯 EXERCICES PRATIQUES</div>
+
+      
+      <div class="exercise-card" style="margin-bottom:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div class="exercise-number" style="background:linear-gradient(135deg,#38a169,#38a16999);">1</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">Le Dialogue des Parties</div>
+            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Identifiez un conflit actuel. Donnez la parole à la partie qui veut avancer : que dit-elle ? Puis à la partie qui résiste : que veut-elle protéger ? Écoutez les deux.</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise-card" style="margin-bottom:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div class="exercise-number" style="background:linear-gradient(135deg,#38a169,#38a16999);">2</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Phrase EXPLORER</div>
+            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Completez : 'Une part de moi voudrait [désir authentique] mais une autre a encore plus peur de [peur universelle du masque] parce que [croyance sous-jacente].'</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise-card" style="margin-bottom:10px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div class="exercise-number" style="background:linear-gradient(135deg,#38a169,#38a16999);">3</div>
+          <div style="flex:1;">
+            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">L'Arbre de la Peur</div>
+            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Prenez une peur. Demandez-vous : 'Et si ça arrivait, qu'est-ce que ça signifierait ?' Répétez 5 fois. Vous atteindrez la peur racine — la peur universelle derrière le masque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JOURNAL INVITATION -->
+    <div class="glass-card" style="background:#38a16906;border-color:#38a16933;text-align:center;padding:24px;margin-bottom:16px;">
+      <div style="font-size:36px;margin-bottom:12px;">📓</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text-bright);margin-bottom:8px;">Ancrez dans votre journal</div>
+      <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto 16px;">Après avoir pratiqué les exercices, utilisez la méthode V.A.L.E.U.R© complète dans votre journal pour ancrer la transformation.</p>
+      <button onclick="VALEUR_JOURNAL.open()" class="btn-glass" style="border-color:#38a16944;color:#38a169;">
+        Ouvrir le journal →
+      </button>
+    </div>
+
+    <!-- COMPLETE BUTTON -->
+    <button class="complete-btn" id="complete-btn" onclick="completeModule()">
+      ✨ Module EXPLORER complété — Continuer →
+    </button>
+
+    <!-- NAVIGATION -->
+    <div style="display:flex;gap:12px;">
+      <a href="module3.html" class="btn-ghost" style="flex:1;text-align:center;text-decoration:none;">← Module 3</a>
+      <a href="module5.html" class="btn-primary" id="next-btn" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0.5;pointer-events:none;" aria-disabled="true">
+        Module 5 — UNIFIER →
+      </a>
+    </div>
+
+    <footer class="copyright-footer">
+      © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
+      Tous droits réservés. Reproduction et diffusion interdites.
+    </footer>
+  </main>
+
+  <script src="assets/js/journal-manager.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      VALEUR_PROGRESS.render('module4');
+      const done = VALEUR_PROGRESS.isDone('module4');
+      if (done) {
+        const btn = document.getElementById('complete-btn');
+        if (btn) { btn.textContent = '✅ Module complété'; btn.disabled = true; }
+        const next = document.getElementById('next-btn');
+        if (next) { next.style.opacity = '1'; next.style.pointerEvents = 'auto'; }
+      }
+    });
+
+    function completeModule() {
+      VALEUR_PROGRESS.complete('module4');
+      const btn = document.getElementById('complete-btn');
+      if (btn) { btn.textContent = '✅ Module complété !'; btn.disabled = true; }
+      const next = document.getElementById('next-btn');
+      if (next) { next.style.opacity = '1'; next.style.pointerEvents = 'auto'; }
+      VALEUR_JOURNAL.showConfetti();
+      VALEUR_JOURNAL.showToast('🎉 Module EXPLORER complété !');
+      VALEUR_PROGRESS.render('module4');
+      setTimeout(() => {
+        window.location.href = 'module5.html';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
