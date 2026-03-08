@@ -801,7 +801,7 @@ input, textarea { user-select:text !important; }
 
   <main class="page-content">
 
-    <!-- HERO -->
+        <!-- HERO -->
     <div class="module-hero glass-card animate-in" style="background:linear-gradient(135deg,rgba(237,137,54,0.15),#ed893605);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
         <div class="phase-tag">MODULE 2</div>
@@ -812,385 +812,227 @@ input, textarea { user-select:text !important; }
       <p style="font-size:14px;color:var(--text-muted);">Recevoir l'émotion sans la fuir</p>
     </div>
 
-    <!-- ACCROCHE -->
-    <div class="accroche-box animate-in-2">
-      Vous avez l'habitude de fuir ce que vous ressentez ? De vous distraire, de minimiser, d'anesthésier ? De vous dire que ça va alors que ça ne va pas ?
-    </div>
+    <div class="accroche-box animate-in-2" style="border-color:#ed8936;">Vous avez l'habitude de fuir ce que vous ressentez ? De vous distraire, de minimiser, d'anesthésier ? De vous dire que <em>ça va</em> alors que ça ne va pas ?</div>
 
-    <!-- INTRO -->
+    <!-- COMPRENDRE ACCUEILLIR -->
     <div class="glass-card animate-in-2" style="margin-bottom:16px;">
-      <div class="label-gold" style="margin-bottom:12px;border-color:#ed893644;color:#ed8936;background:#ed893608;">💡 L'ESSENTIEL</div>
-      <p class="text-muted" style="font-size:14px;line-height:1.8;">La deuxième étape est paradoxale : pour que l'émotion passe, il faut l'<strong style='color:var(--text-bright)'>ACCUEILLIR</strong>. La résistance amplifie. L'accueil dissout.</p>
-      <div class="gold-divider" style="margin:14px 0;"></div>
-      <div style="background:#ed893608;border:1px solid #ed893625;border-radius:var(--r-md);padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:#ed8936;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">✦ Normalisation</div>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Toute émotion a une durée de vie biologique de 90 secondes si on la laisse traverser. Ce qui la maintient, c'est notre résistance à la ressentir.</p>
-      </div>
-      <div class="gold-divider" style="margin:14px 0;"></div>
-      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:var(--r-md);padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">→ La promesse</div>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Voici comment transformer votre relation aux émotions — de la fuite à l'accueil, de la résistance à la fluidité.</p>
-      </div>
-    </div>
-
-    <!-- EXERCICES -->
-    <div class="glass-card animate-in-3" style="margin-bottom:16px;">
-      <div class="label-gold" style="margin-bottom:16px;border-color:#ed893644;color:#ed8936;background:#ed893608;">🎯 EXERCICES PRATIQUES</div>
-
-      
-      <div class="exercise-card" style="margin-bottom:10px;">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div class="exercise-number" style="background:linear-gradient(135deg,#ed8936,#ed893699);">1</div>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Technique des 90 Secondes</div>
-            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Quand une émotion monte : ne la fuyez pas. Mettez un timer 90 secondes. Restez avec l'émotion, sans la nourrir et sans la fuir. Observez-la se transformer.</p>
+      <div class="label-gold" style="margin-bottom:12px;border-color:#ed893644;color:#ed8936;background:#ed893608;">💡 QU'EST-CE QU'ACCUEILLIR ?</div>
+      <p class="text-muted" style="margin-bottom:14px;">ACCUEILLIR, c'est paradoxal : pour que l'émotion <em>passe</em>, il faut la <strong style="color:var(--text-bright)">laisser être</strong>. La résistance amplifie. L'accueil dissout. Ce n'est pas de la résignation — c'est un acte actif et courageux.</p>
+      <div id="acc-wrapper" style="display:flex;flex-direction:column;gap:8px;">
+        <div class="acc-item" id="acc0" style="background:#ed893608;border:1px solid #ed893622;border-radius:14px;overflow:hidden;">
+          <div onclick="tAcc(0)" style="padding:14px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:14px;font-weight:600;color:var(--text-bright);">❌ Ce que ce n'est PAS</span>
+            <span id="ac0" style="color:#ed8936;transition:transform .3s;">▼</span>
+          </div>
+          <div id="ab0" style="display:none;padding:0 14px 14px;">
+            <p class="text-muted" style="font-size:13px;line-height:1.7;">• <strong>Pas de la passivité</strong> — vous ne subissez pas, vous choisissez de laisser passer<br>• <strong>Pas de la complaisance</strong> — accueillir la colère ne signifie pas exploser<br>• <strong>Pas "faire semblant que ça va"</strong> — c'est exactement l'inverse<br>• <strong>Pas se noyer dedans</strong> — l'accueil est temporaire, pas une fusion permanente</p>
           </div>
         </div>
-      </div>
-      <div class="exercise-card" style="margin-bottom:10px;">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div class="exercise-number" style="background:linear-gradient(135deg,#ed8936,#ed893699);">2</div>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Main sur le Cœur</div>
-            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Posez une main sur votre cœur. Dites doucement : 'Je vois que tu souffres. C'est normal. Je suis là.' Cette autocompassion active le système parasympathique.</p>
+        <div class="acc-item" id="acc1" style="background:#ed893608;border:1px solid #ed893622;border-radius:14px;overflow:hidden;">
+          <div onclick="tAcc(1)" style="padding:14px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:14px;font-weight:600;color:var(--text-bright);">✅ Ce que c'est vraiment</span>
+            <span id="ac1" style="color:#ed8936;transition:transform .3s;">▼</span>
+          </div>
+          <div id="ab1" style="display:none;padding:0 14px 14px;">
+            <p class="text-muted" style="font-size:13px;line-height:1.7;">• <strong>Reconnaître</strong> — "Il y a de la peur en moi en ce moment"<br>• <strong>Observer</strong> — sans juger, sans analyser, sans chasser<br>• <strong>Laisser circuler</strong> — comme laisser une vague vous traverser sans vous y opposer<br>• <strong>Écouter</strong> — chaque émotion porte une information précieuse sur un besoin</p>
           </div>
         </div>
-      </div>
-      <div class="exercise-card" style="margin-bottom:10px;">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div class="exercise-number" style="background:linear-gradient(135deg,#ed8936,#ed893699);">3</div>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">Le Nommage Émotionnel</div>
-            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Chaque jour, nommez 3 émotions précises que vous ressentez (pas juste 'bien' ou 'mal'). La précision émotionnelle réduit l'activité de l'amygdale de 40%.</p>
+        <div class="acc-item" id="acc2" style="background:#ed893608;border:1px solid #ed893622;border-radius:14px;overflow:hidden;">
+          <div onclick="tAcc(2)" style="padding:14px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;">
+            <span style="font-size:14px;font-weight:600;color:var(--text-bright);">🧠 Ce que dit la neuroscience</span>
+            <span id="ac2" style="color:#ed8936;transition:transform .3s;">▼</span>
+          </div>
+          <div id="ab2" style="display:none;padding:0 14px 14px;">
+            <p class="text-muted" style="font-size:13px;line-height:1.7;">Une émotion non résistée dure en moyenne <strong style="color:#ed8936;">90 secondes</strong> (Dr Jill Bolte Taylor, neuroscientifique). Après ce délai, si vous ne l'alimentez pas par des pensées, elle se dissipe biologiquement.<br><br>Ce sont les pensées de résistance — "je ne devrais pas ressentir ça", "c'est idiot", "arrête ça" — qui maintiennent l'émotion vivante et l'amplifient.<br><br>L'<strong>amygdale</strong> signale la menace. Le <strong>cortex préfrontal</strong>, activé par la conscience observatrice, peut moduler cette réponse. L'accueil conscient est exactement ce processus.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- JOURNAL INVITATION -->
+    <!-- 4 FAMILLES D'EMOTIONS -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:14px;border-color:#ed893644;color:#ed8936;background:#ed893608;">💛 LES 4 FAMILLES D'ÉMOTIONS</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:14px;">Chaque famille d'émotions porte un message et pointe vers un besoin. Reconnaître la famille aide à écouter le vrai message.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="background:rgba(229,62,62,0.08);border:1px solid #e53e3e33;border-radius:12px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:18px;">😰</span>
+            <span style="font-size:13px;font-weight:700;color:#e53e3e;">Anxiété — Peur — Appréhension</span>
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin:0;"><strong>Message :</strong> "Un danger menace" · <strong>Besoin :</strong> Sécurité, protection, prévoyance</p>
+        </div>
+        <div style="background:rgba(237,137,54,0.08);border:1px solid #ed893633;border-radius:12px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:18px;">😠</span>
+            <span style="font-size:13px;font-weight:700;color:#ed8936;">Colère — Irritation — Agacement</span>
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin:0;"><strong>Message :</strong> "Quelque chose est injuste ou me bloque" · <strong>Besoin :</strong> Justice, respect, pouvoir d'agir</p>
+        </div>
+        <div style="background:rgba(128,90,213,0.08);border:1px solid #805ad533;border-radius:12px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:18px;">😞</span>
+            <span style="font-size:13px;font-weight:700;color:#805ad5;">Tristesse — Découragement — Chagrin</span>
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin:0;"><strong>Message :</strong> "J'ai perdu quelque chose de précieux" · <strong>Besoin :</strong> Réconfort, soutien, reconnaissance de la perte</p>
+        </div>
+        <div style="background:rgba(90,103,216,0.08);border:1px solid #5a67d833;border-radius:12px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:18px;">😔</span>
+            <span style="font-size:13px;font-weight:700;color:#5a67d8;">Honte — Culpabilité — Auto-dévalorisation</span>
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin:0;"><strong>Message :</strong> "J'ai transgressé mes propres valeurs" · <strong>Besoin :</strong> Réparation, pardon, cohérence, estime de soi</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIMER 90 SECONDES -->
+    <div class="glass-card" style="margin-bottom:16px;border-color:#ed893633;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#ed893644;color:#ed8936;background:#ed893608;">⏱ EXERCICE — LE TIMER DES 90 SECONDES</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:16px;">La prochaine fois qu'une émotion monte : <strong style="color:var(--text-bright);">ne la fuyez pas</strong>. Lancez ce timer. Restez avec l'émotion sans la nourrir et sans la fuir. Observez-la se transformer.</p>
+      <div style="text-align:center;padding:20px 10px;">
+        <div id="t90-ring" style="width:140px;height:140px;border-radius:50%;background:conic-gradient(#ed8936 0%, #ed8936 100%);display:inline-flex;align-items:center;justify-content:center;position:relative;transition:background 1s linear;margin-bottom:16px;">
+          <div style="position:absolute;inset:8px;border-radius:50%;background:var(--bg-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <div id="t90-num" style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;color:#ed8936;line-height:1;">90</div>
+            <div id="t90-lbl" style="font-size:11px;color:var(--text-dim);">secondes</div>
+          </div>
+        </div>
+        <br>
+        <p id="t90-msg" style="font-size:13px;color:var(--text-muted);margin-bottom:14px;font-style:italic;">Ressentez l'émotion. Nommez-la. Observez.</p>
+        <button id="t90-btn" onclick="start90()" style="padding:12px 32px;background:linear-gradient(135deg,#ed8936,#ed8936cc);color:#fff;border:none;border-radius:50px;cursor:pointer;font-family:'Jost',sans-serif;font-size:15px;font-weight:700;box-shadow:0 4px 20px #ed893644;">Commencer</button>
+      </div>
+    </div>
+
+    <!-- TECHNIQUE MAIN SUR LE CŒUR -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#ed893644;color:#ed8936;background:#ed893608;">🤲 TECHNIQUE — LA MAIN SUR LE CŒUR</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:#ed893608;border-radius:12px;padding:12px;display:flex;align-items:flex-start;gap:10px;">
+          <span style="font-size:20px;min-width:28px;">1️⃣</span>
+          <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;"><strong style="color:var(--text-bright);">Posez une main sur votre cœur</strong> — ce geste physique active le système parasympathique (apaisement)</p>
+        </div>
+        <div style="background:#ed893608;border-radius:12px;padding:12px;display:flex;align-items:flex-start;gap:10px;">
+          <span style="font-size:20px;min-width:28px;">2️⃣</span>
+          <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Dites doucement, à voix haute ou mentalement : <em style="color:#ed8936;">"Je vois que tu souffres. C'est normal. Je suis là."</em></p>
+        </div>
+        <div style="background:#ed893608;border-radius:12px;padding:12px;display:flex;align-items:flex-start;gap:10px;">
+          <span style="font-size:20px;min-width:28px;">3️⃣</span>
+          <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Respirez lentement en sentant la chaleur de votre main. Restez ici <strong style="color:var(--text-bright);">au moins 30 secondes</strong>.</p>
+        </div>
+      </div>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:12px;padding:12px;margin-top:12px;">
+        <p style="font-size:12px;color:var(--gold);line-height:1.6;margin:0;">💛 L'autocompassion n'est pas de la faiblesse — des études montrent qu'elle active les mêmes circuits neurologiques que la chaleur d'un proche.</p>
+      </div>
+    </div>
+
+    <!-- RESPIRATION D'ACCUEIL -->
+    <div class="glass-card" style="margin-bottom:16px;border-color:#ed893622;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#ed893644;color:#ed8936;background:#ed893608;">🌬️ RESPIRATION D'ACCUEIL ÉMOTIONNEL</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:14px;">Chaque cycle respiratoire est une invitation consciente à accueillir. À répéter 3 à 5 fois.</p>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+        <div style="background:#ed89360a;border-left:3px solid #ed8936;padding:10px 14px;border-radius:0 10px 10px 0;">
+          <p style="font-size:13px;color:var(--text-bright);margin:0;"><span style="color:#ed8936;font-weight:700;">Inspiration :</span> <em>"Je reconnais cette émotion"</em></p>
+        </div>
+        <div style="background:#ed89360a;border-left:3px solid #ed893688;padding:10px 14px;border-radius:0 10px 10px 0;">
+          <p style="font-size:13px;color:var(--text-bright);margin:0;"><span style="color:#ed893688;font-weight:700;">Rétention :</span> <em>"Elle est là, c'est OK"</em></p>
+        </div>
+        <div style="background:#ed89360a;border-left:3px solid #ed893655;padding:10px 14px;border-radius:0 10px 10px 0;">
+          <p style="font-size:13px;color:var(--text-bright);margin:0;"><span style="color:#ed893655;font-weight:700;">Expiration :</span> <em>"Je la laisse circuler"</em></p>
+        </div>
+      </div>
+
+      <!-- MAPPAGE PERSONNEL -->
+      <div class="label-gold" style="margin-bottom:12px;border-color:#ed893644;color:#ed8936;background:#ed893608;">📝 MAPPAGE PERSONNEL — 2 ÉMOTIONS</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:12px;">Pour 2 émotions que vous ressentez régulièrement, explorez leur message :</p>
+      <div id="mappage-container" style="display:flex;flex-direction:column;gap:14px;">
+        <div style="background:#ed893606;border:1px solid #ed893622;border-radius:14px;padding:14px;">
+          <p style="font-size:12px;font-weight:700;color:#ed8936;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Émotion 1</p>
+          <input placeholder="Quelle émotion ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;margin-bottom:8px;" oninput="saveMappage()">
+          <input placeholder="Où la ressentez-vous dans le corps ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;margin-bottom:8px;" oninput="saveMappage()">
+          <input placeholder="Quel est son déclencheur typique ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;margin-bottom:8px;" oninput="saveMappage()">
+          <input placeholder="Quel besoin sous-jacent révèle-t-elle ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;" oninput="saveMappage()">
+        </div>
+        <div style="background:#ed893606;border:1px solid #ed893622;border-radius:14px;padding:14px;">
+          <p style="font-size:12px;font-weight:700;color:#ed8936;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Émotion 2</p>
+          <input placeholder="Quelle émotion ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;margin-bottom:8px;" oninput="saveMappage()">
+          <input placeholder="Où la ressentez-vous dans le corps ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;margin-bottom:8px;" oninput="saveMappage()">
+          <input placeholder="Quel est son déclencheur typique ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;margin-bottom:8px;" oninput="saveMappage()">
+          <input placeholder="Quel besoin sous-jacent révèle-t-elle ?" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;" oninput="saveMappage()">
+        </div>
+      </div>
+    </div>
+
+    <!-- JOURNAL -->
     <div class="glass-card" style="background:#ed893606;border-color:#ed893633;text-align:center;padding:24px;margin-bottom:16px;">
       <div style="font-size:36px;margin-bottom:12px;">📓</div>
       <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text-bright);margin-bottom:8px;">Ancrez dans votre journal</div>
-      <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto 16px;">Après avoir pratiqué les exercices, utilisez la méthode V.A.L.E.U.R© complète dans votre journal pour ancrer la transformation.</p>
-      <button onclick="VALEUR_JOURNAL.open()" class="btn-glass" style="border-color:#ed893644;color:#ed8936;">
-        Ouvrir le journal →
-      </button>
+      <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto 16px;">Quelle émotion avez-vous accueillie aujourd'hui ? Quel besoin cachait-elle ? Comment vous êtes-vous senti après l'avoir laissée circuler ?</p>
+      <button onclick="VALEUR_JOURNAL.open()" class="btn-glass" style="border-color:#ed893644;color:#ed8936;">Ouvrir le journal →</button>
     </div>
 
-    <!-- COMPLETE BUTTON -->
-    <button class="complete-btn" id="complete-btn" onclick="completeModule()">
-      ✨ Module ACCUEILLIR complété — Continuer →
-    </button>
-
-    <!-- NAVIGATION -->
+    <button class="complete-btn" id="complete-btn" onclick="completeModule()">✨ Module ACCUEILLIR complété — Continuer →</button>
     <div style="display:flex;gap:12px;">
       <a href="module1.html" class="btn-ghost" style="flex:1;text-align:center;text-decoration:none;">← Module 1</a>
-      <a href="module3.html" class="btn-primary" id="next-btn" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0.5;pointer-events:none;" aria-disabled="true">
-        Module 3 — LOCALISER →
-      </a>
+      <a href="module3.html" class="btn-primary" id="next-btn" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0.5;pointer-events:none;" aria-disabled="true">Module 3 — LOCALISER →</a>
     </div>
-
     <footer class="copyright-footer">
       © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
-      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
-      Tous droits réservés. Reproduction et diffusion interdites.
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>Tous droits réservés. Reproduction et diffusion interdites.
     </footer>
   </main>
 
   <script>
-/* ═══════════════════════════════════════════════════════════════════
-   JOURNAL-MANAGER.JS — Journal Universel V.A.L.E.U.R©
-   © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue
-   Tous droits réservés.
-   ═══════════════════════════════════════════════════════════════════ */
-
-(function() {
-  'use strict';
-
-  const LS_KEY = 'valeur_journal_entries';
-  const MASQUES = [
-    { id:'rouge',  emoji:'🔴', color:'#e53e3e', label:'Rouge',  peur:'Mort / maladie' },
-    { id:'orange', emoji:'🟠', color:'#ed8936', label:'Orange', peur:'Souffrance psychique' },
-    { id:'jaune',  emoji:'🟡', color:'#d69e2e', label:'Jaune',  peur:'Inconnu / incertitude' },
-    { id:'vert',   emoji:'🟢', color:'#38a169', label:'Vert',   peur:'Rejet / abandon' },
-    { id:'bleu',   emoji:'🔵', color:'#3182ce', label:'Bleu',   peur:'Impuissance' },
-    { id:'indigo', emoji:'🔷', color:'#5a67d8', label:'Indigo', peur:'Échec / inadéquation' },
-    { id:'violet', emoji:'💜', color:'#805ad5', label:'Violet', peur:'Perte d\'identité' },
-  ];
-
-  const STEPS = [
-    { letter:'V', name:'VOIR',       desc:'Quel masque est actif ? Quel est le déclencheur ?' },
-    { letter:'A', name:'ACCUEILLIR', desc:'Quelle émotion est présente ? Comment vous sentez-vous ?' },
-    { letter:'L', name:'LOCALISER',  desc:'Où le ressentez-vous dans votre corps ?' },
-    { letter:'E', name:'EXPLORER',   desc:'Quel conflit intérieur existe ? Une part de moi voudrait... mais une autre...' },
-    { letter:'U', name:'UNIFIER',    desc:'Comment réconcilier ces deux parts de vous ?' },
-    { letter:'R', name:'RENFORCER',  desc:'Quelle nouvelle action choisissez-vous ? Quelle posture nouvelle ?' },
-  ];
-
-  // ── STORAGE ────────────────────────────────────────────────────────
-  function getEntries() {
-    try { return JSON.parse(localStorage.getItem(LS_KEY) || '[]'); } catch(e) { return []; }
-  }
-  function saveEntry(entry) {
-    const entries = getEntries();
-    entries.unshift(entry);
-    if (entries.length > 50) entries.splice(50);
-    try { localStorage.setItem(LS_KEY, JSON.stringify(entries)); } catch(e) {}
-    window.dispatchEvent(new CustomEvent('valeur:journal-updated', { detail: { entries } }));
-  }
-  function getStats() {
-    const entries = getEntries();
-    const masqueCounts = {};
-    MASQUES.forEach(m => masqueCounts[m.id] = 0);
-    entries.forEach(e => { if (e.masque) masqueCounts[e.masque] = (masqueCounts[e.masque]||0)+1; });
-    return { total: entries.length, masqueCounts, lastEntry: entries[0] || null };
+  function tAcc(i) {
+    var b = document.getElementById('ab'+i);
+    var a = document.getElementById('ac'+i);
+    if (!b) return;
+    var open = b.style.display !== 'none';
+    b.style.display = open?'none':'block';
+    if(a) a.style.transform = open?'':'rotate(180deg)';
   }
 
-  // ── MODAL BUILD ────────────────────────────────────────────────────
-  function buildModal() {
-    const overlay = document.createElement('div');
-    overlay.id = 'valeur-journal-modal';
-    overlay.className = 'modal-overlay';
-    overlay.setAttribute('role','dialog');
-    overlay.setAttribute('aria-label','Journal V.A.L.E.U.R©');
-
-    let selectedMasque = null;
-    const stepValues = ['','','','','',''];
-
-    overlay.innerHTML = `
-      <div class="modal-sheet">
-        <div class="modal-handle"></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-          <div>
-            <div class="label-gold" style="margin-bottom:8px;">📓 MON JOURNAL</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#f7f3ee;">Méthode V.A.L.E.U.R©</div>
-          </div>
-          <button id="journal-close" style="background:none;border:none;cursor:pointer;color:#64748b;font-size:22px;padding:8px;line-height:1;" aria-label="Fermer">×</button>
-        </div>
-
-        <!-- MASQUE SELECTOR -->
-        <div class="glass-card" style="margin-bottom:16px;padding:16px;">
-          <div style="font-size:12px;font-weight:700;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">Masque actif (optionnel)</div>
-          <div class="masque-grid" id="masque-selector">
-            ${MASQUES.map(m => `
-              <button class="masque-chip" data-masque="${m.id}" style="color:${m.color};" title="${m.label} — ${m.peur}">
-                <span>${m.emoji}</span>
-                <div class="masque-chip-dot" style="background:${m.color};"></div>
-              </button>
-            `).join('')}
-          </div>
-          <div id="masque-selected-label" style="text-align:center;font-size:12px;color:#64748b;margin-top:8px;height:16px;"></div>
-        </div>
-
-        <!-- V.A.L.E.U.R STEPS -->
-        <div id="journal-steps">
-          ${STEPS.map((s,i) => `
-            <div class="journal-step" data-step="${i}">
-              <div class="journal-step-header">
-                <div class="journal-letter">${s.letter}</div>
-                <div>
-                  <div class="journal-label">${s.name}</div>
-                  <div class="journal-sublabel">${s.desc}</div>
-                </div>
-              </div>
-              <textarea class="journal-textarea" data-index="${i}" placeholder="${s.desc}" rows="3" maxlength="500"></textarea>
-            </div>
-          `).join('')}
-        </div>
-
-        <div style="display:flex;gap:10px;margin-top:20px;">
-          <button id="journal-save" class="btn-primary" style="flex:1;">
-            ✨ Enregistrer dans mon journal
-          </button>
-        </div>
-        <div style="text-align:center;font-size:10px;color:#475569;margin-top:12px;letter-spacing:0.5px;">
-          © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon · Données stockées localement
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(overlay);
-
-    // Close
-    overlay.querySelector('#journal-close').addEventListener('click', closeModal);
-    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-
-    // Masque selection
-    overlay.querySelectorAll('.masque-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        overlay.querySelectorAll('.masque-chip').forEach(c => c.classList.remove('selected'));
-        chip.classList.add('selected');
-        selectedMasque = chip.dataset.masque;
-        const m = MASQUES.find(x => x.id === selectedMasque);
-        overlay.querySelector('#masque-selected-label').textContent = m ? `${m.label} — ${m.peur}` : '';
-        overlay.querySelector('#masque-selected-label').style.color = m ? m.color : '#64748b';
-      });
-    });
-
-    // Step focus highlight
-    overlay.querySelectorAll('.journal-textarea').forEach(ta => {
-      ta.addEventListener('focus', () => {
-        overlay.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
-        ta.closest('.journal-step').classList.add('active');
-      });
-      ta.addEventListener('input', e => {
-        stepValues[parseInt(e.target.dataset.index)] = e.target.value;
-      });
-    });
-
-    // Save
-    overlay.querySelector('#journal-save').addEventListener('click', () => {
-      const textareas = overlay.querySelectorAll('.journal-textarea');
-      const steps = {};
-      let hasContent = false;
-      STEPS.forEach((s, i) => {
-        const val = textareas[i].value.trim();
-        if (val) hasContent = true;
-        steps[s.letter] = val;
-      });
-      if (!hasContent && !selectedMasque) {
-        showToast('Remplissez au moins un champ pour enregistrer 🌱');
-        return;
+  // Timer 90s
+  var t90interval=null, t90running=false, t90val=90;
+  function start90() {
+    if (t90running) {
+      clearInterval(t90interval); t90running=false;
+      document.getElementById('t90-btn').textContent='Recommencer';
+      document.getElementById('t90-num').textContent='90'; document.getElementById('t90-lbl').textContent='secondes';
+      document.getElementById('t90-msg').textContent='Ressentez l\'émotion. Nommez-la. Observez.';
+      document.getElementById('t90-ring').style.background='conic-gradient(#ed8936 0%, #ed8936 100%)';
+      t90val=90; return;
+    }
+    t90running=true; t90val=90;
+    document.getElementById('t90-btn').textContent='Arrêter';
+    document.getElementById('t90-msg').textContent='Restez avec l\'émotion...';
+    t90interval = setInterval(function(){
+      t90val--;
+      document.getElementById('t90-num').textContent=t90val;
+      var pct = ((90-t90val)/90*100);
+      document.getElementById('t90-ring').style.background='conic-gradient(#ed8936 '+pct+'%, rgba(255,255,255,0.05) '+pct+'%)';
+      if (t90val<=0) {
+        clearInterval(t90interval); t90running=false;
+        document.getElementById('t90-num').textContent='✓';
+        document.getElementById('t90-lbl').textContent='terminé';
+        document.getElementById('t90-msg').textContent='L\'émotion a traversé. Vous êtes toujours là. 💛';
+        document.getElementById('t90-btn').textContent='Recommencer';
+        VALEUR_JOURNAL.showToast('✅ 90 secondes complétées !');
       }
-      const entry = {
-        id: Date.now(),
-        date: new Date().toISOString(),
-        masque: selectedMasque,
-        steps,
-      };
-      saveEntry(entry);
-      closeModal();
-      showConfetti();
-      showToast('✨ Journal enregistré avec succès');
-    });
-
-    return overlay;
+    }, 1000);
   }
 
-  // ── FAB BUILD ──────────────────────────────────────────────────────
-  function buildFAB() {
-    const fab = document.createElement('button');
-    fab.className = 'fab';
-    fab.id = 'valeur-fab';
-    fab.setAttribute('aria-label','Ouvrir le journal V.A.L.E.U.R©');
-    fab.setAttribute('title','Journal V.A.L.E.U.R©');
-    fab.innerHTML = '📓';
-    fab.addEventListener('click', openModal);
-    document.body.appendChild(fab);
-    return fab;
+  function saveMappage() {
+    var inputs = document.querySelectorAll('#mappage-container input');
+    var vals = Array.from(inputs).map(function(i){return i.value;});
+    try { localStorage.setItem('valeur_mappage', JSON.stringify(vals)); } catch(e){}
   }
-
-  // ── MODAL CONTROL ──────────────────────────────────────────────────
-  let modalEl = null;
-  function openModal() {
-    if (!modalEl) modalEl = buildModal();
-    modalEl.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    modalEl.querySelectorAll('.journal-textarea')[0]?.focus();
-  }
-  function closeModal() {
-    if (modalEl) {
-      modalEl.classList.remove('open');
-      document.body.style.overflow = '';
-      // Reset form
-      modalEl.querySelectorAll('.journal-textarea').forEach(ta => ta.value = '');
-      modalEl.querySelectorAll('.masque-chip').forEach(c => c.classList.remove('selected'));
-      const lbl = modalEl.querySelector('#masque-selected-label');
-      if (lbl) { lbl.textContent = ''; lbl.style.color = '#64748b'; }
-      modalEl.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
-    }
-  }
-
-  // ── TOAST ──────────────────────────────────────────────────────────
-  let toastEl = null;
-  function showToast(msg) {
-    if (!toastEl) {
-      toastEl = document.createElement('div');
-      toastEl.className = 'toast';
-      document.body.appendChild(toastEl);
-    }
-    toastEl.textContent = msg;
-    toastEl.classList.add('show');
-    clearTimeout(toastEl._timer);
-    toastEl._timer = setTimeout(() => toastEl.classList.remove('show'), 3000);
-  }
-
-  // ── CONFETTI ───────────────────────────────────────────────────────
-  function showConfetti() {
-    const canvas = document.createElement('canvas');
-    canvas.className = 'confetti-canvas';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    document.body.appendChild(canvas);
-    const ctx = canvas.getContext('2d');
-    const COLORS = ['#c9a84c','#f0d080','#e53e3e','#38a169','#3182ce','#805ad5','#ed8936'];
-    const particles = Array.from({length:80},() => ({
-      x: Math.random() * canvas.width,
-      y: -20,
-      vx: (Math.random()-0.5)*4,
-      vy: Math.random()*4+2,
-      r: Math.random()*5+3,
-      color: COLORS[Math.floor(Math.random()*COLORS.length)],
-      rot: Math.random()*360,
-      rv: (Math.random()-0.5)*8,
-      shape: Math.random()>0.5?'circle':'rect'
-    }));
-    let frame = 0;
-    function draw() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      particles.forEach(p => {
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.rot*Math.PI/180);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = Math.max(0, 1 - frame/120);
-        if (p.shape === 'circle') {
-          ctx.beginPath(); ctx.arc(0,0,p.r,0,Math.PI*2); ctx.fill();
-        } else {
-          ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r);
-        }
-        ctx.restore();
-        p.x += p.vx; p.y += p.vy; p.rot += p.rv; p.vy += 0.1;
-      });
-      frame++;
-      if (frame < 150) requestAnimationFrame(draw);
-      else canvas.remove();
-    }
-    requestAnimationFrame(draw);
-  }
-
-  // ── PUBLIC API ─────────────────────────────────────────────────────
-  window.VALEUR_JOURNAL = {
-    open: openModal,
-    close: closeModal,
-    getEntries,
-    saveEntry,
-    getStats,
-    showToast,
-    showConfetti,
-    MASQUES
-  };
-
-  // ── INIT ON DOM READY ──────────────────────────────────────────────
-  function init() {
-    buildFAB();
-    // Prevent right-click and text selection globally
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('selectstart', e => {
-      if (!['INPUT','TEXTAREA'].includes(e.target.tagName)) e.preventDefault();
-    });
-    document.addEventListener('keydown', e => {
-      if ((e.ctrlKey||e.metaKey) && ['c','u','s','a'].includes(e.key.toLowerCase())) {
-        if (!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)) e.preventDefault();
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
-})();
-
-</script>
+  document.addEventListener('DOMContentLoaded', function(){
+    try {
+      var saved = JSON.parse(localStorage.getItem('valeur_mappage')||'[]');
+      var inputs = document.querySelectorAll('#mappage-container input');
+      inputs.forEach(function(inp,i){ if(saved[i]) inp.value=saved[i]; });
+    } catch(e){}
+  });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       VALEUR_PROGRESS.render('module2');
@@ -1214,7 +1056,7 @@ input, textarea { user-select:text !important; }
       VALEUR_PROGRESS.render('module2');
       setTimeout(() => {
         window.location.href = 'module3.html';
-      }, 2000);
+      }, 2200);
     }
   </script>
 </body>

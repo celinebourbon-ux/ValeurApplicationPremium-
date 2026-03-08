@@ -755,7 +755,7 @@ input, textarea { user-select:text !important; }
     }
     .accroche-box {
       background:rgba(255,255,255,0.02);
-      border-left:3px solid #3182ce;
+      border-left:3px solid #ed8936;
       border-radius:0 var(--r-lg) var(--r-lg) 0;
       padding:18px 20px; margin-bottom:16px;
       font-family:'Cormorant Garamond',serif;
@@ -801,7 +801,7 @@ input, textarea { user-select:text !important; }
 
   <main class="page-content">
 
-    <!-- HERO -->
+        <!-- HERO -->
     <div class="module-hero glass-card animate-in" style="background:linear-gradient(135deg,rgba(49,130,206,0.15),#3182ce05);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
         <div class="phase-tag">MODULE 5</div>
@@ -812,385 +812,139 @@ input, textarea { user-select:text !important; }
       <p style="font-size:14px;color:var(--text-muted);">Réconcilier les parties en conflit</p>
     </div>
 
-    <!-- ACCROCHE -->
-    <div class="accroche-box animate-in-2">
-      Après avoir exploré le conflit, vient le moment de la réconciliation. Pas de faire taire une partie — mais de trouver ce qui peut satisfaire les deux.
-    </div>
+    <div class="accroche-box animate-in-2" style="border-color:#3182ce;">La lutte intérieure dépense votre énergie dans le combat contre vous-même. Et si les deux parties — le masque ET la valeur — pouvaient travailler ensemble ?</div>
 
-    <!-- INTRO -->
+    <!-- COMPRENDRE L'UNIFICATION -->
     <div class="glass-card animate-in-2" style="margin-bottom:16px;">
-      <div class="label-gold" style="margin-bottom:12px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">💡 L'ESSENTIEL</div>
-      <p class="text-muted" style="font-size:14px;line-height:1.8;">L'<strong style='color:var(--text-bright)'>UNIFICATION</strong> n'est pas l'élimination d'une partie. C'est la création d'une relation nouvelle entre votre nature authentique et votre masque — anciens ennemis devenus alliés.</p>
-      <div class="gold-divider" style="margin:14px 0;"></div>
-      <div style="background:#3182ce08;border:1px solid #3182ce25;border-radius:var(--r-md);padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:#3182ce;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">✦ Normalisation</div>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Le masque n'est pas votre ennemi. Il a cherché à vous protéger. Remercier sa protection tout en lui montrant qu'elle n'est plus nécessaire — c'est l'unification.</p>
-      </div>
-      <div class="gold-divider" style="margin:14px 0;"></div>
-      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:var(--r-md);padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">→ La promesse</div>
-        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;margin:0;">Voici comment transformer la guerre intérieure en paix — et cette paix en force.</p>
+      <div class="label-gold" style="margin-bottom:12px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">💡 QU'EST-CE QU'UNIFIER ?</div>
+      <p class="text-muted" style="margin-bottom:12px;font-size:13px;line-height:1.7;">L'unification n'est pas de <em>choisir entre</em> le masque et la valeur — c'est de <strong style="color:var(--text-bright);">créer une alliance</strong> entre sécurité et authenticité. Ces deux parties ont toutes les deux raison. Le masque voulait vous protéger. La valeur veut vous libérer.</p>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:12px;padding:14px;">
+        <p style="font-size:13px;color:var(--gold);line-height:1.7;margin:0;">💛 <strong>L'union fait la force.</strong> La lutte intérieure dépense l'énergie dans un combat contre vous-même. Quand les deux parties collaborent, cette énergie devient disponible pour vivre pleinement.</p>
       </div>
     </div>
 
-    <!-- EXERCICES -->
-    <div class="glass-card animate-in-3" style="margin-bottom:16px;">
-      <div class="label-gold" style="margin-bottom:16px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">🎯 EXERCICES PRATIQUES</div>
+    <!-- IDENTIFIER LES BESOINS DES 2 PARTIES -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:14px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">⚡ ÉTAPE 1 — LES BESOINS DES DEUX PARTIES</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:14px;">Pour unifier, il faut d'abord <em>comprendre ce que chaque partie cherche</em>. Les deux ont des besoins légitimes.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+        <div style="background:rgba(229,62,62,0.08);border:1px solid #e53e3e33;border-radius:12px;padding:14px;">
+          <p style="font-size:11px;font-weight:700;color:#e53e3e;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">🎭 Besoins du masque</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:10px;">Qu'est-ce que le masque cherche à préserver ?</p>
+          <textarea id="need-masque" rows="3" placeholder="Sécurité, contrôle, éviter la douleur, être aimé..." style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:12px;resize:vertical;" oninput="saveUnif()"></textarea>
+        </div>
+        <div style="background:#3182ce08;border:1px solid #3182ce33;border-radius:12px;padding:14px;">
+          <p style="font-size:11px;font-weight:700;color:#3182ce;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">✨ Besoins de la valeur</p>
+          <p style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:10px;">Qu'est-ce que votre nature authentique cherche à exprimer ?</p>
+          <textarea id="need-valeur" rows="3" placeholder="S'exprimer librement, créer du lien, contribuer..." style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:8px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:12px;resize:vertical;" oninput="saveUnif()"></textarea>
+        </div>
+      </div>
+      <div style="background:#3182ce06;border:1px solid #3182ce22;border-radius:12px;padding:14px;">
+        <p style="font-size:12px;font-weight:700;color:#3182ce;margin-bottom:8px;">💬 Le dialogue d'unification</p>
+        <p class="text-muted" style="font-size:13px;line-height:1.7;margin-bottom:8px;font-style:italic;">Une part de moi voudrait <input id="unif-veut" placeholder="..." style="background:transparent;border-bottom:1px solid #3182ce44;color:var(--text-bright);font-family:'Jost',sans-serif;font-size:13px;width:180px;padding:2px 4px;" oninput="saveUnif()">... mais une autre part a encore plus peur de <input id="unif-peur" placeholder="..." style="background:transparent;border-bottom:1px solid #3182ce44;color:var(--text-bright);font-family:'Jost',sans-serif;font-size:13px;width:180px;padding:2px 4px;" oninput="saveUnif()">.</p>
+      </div>
+    </div>
 
-      
-      <div class="exercise-card" style="margin-bottom:10px;">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div class="exercise-number" style="background:linear-gradient(135deg,#3182ce,#3182ce99);">1</div>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Lettre de Réconciliation</div>
-            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Écrivez une lettre à votre masque le plus actif. Remerciez-le pour sa protection passée. Expliquez-lui que vous avez de nouvelles ressources maintenant. Dites-lui qu'il peut se reposer.</p>
-          </div>
+    <!-- CRÉER DES PONTS -->
+    <div class="glass-card" style="margin-bottom:16px;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">🌉 ÉTAPE 2 — CRÉER DES PONTS</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:12px;">Pour chaque besoin du masque, trouvez une façon de le respecter <em>tout en</em> permettant à la valeur de s'exprimer progressivement.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:#3182ce06;border:1px solid #3182ce22;border-radius:12px;padding:12px;">
+          <p style="font-size:12px;font-weight:700;color:#3182ce;margin-bottom:6px;">Les conditions de sécurité nécessaires :</p>
+          <textarea id="bridge1" rows="2" placeholder="Je peux m'exprimer librement SI... quand... avec qui... à quel rythme..." style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;resize:vertical;" oninput="saveUnif()"></textarea>
         </div>
-      </div>
-      <div class="exercise-card" style="margin-bottom:10px;">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div class="exercise-number" style="background:linear-gradient(135deg,#3182ce,#3182ce99);">2</div>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">Le Pacte des Parties</div>
-            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Formulez un accord : 'Ma part [désir] peut s'exprimer dans [contexte précis], et ma part [protection] sera rassurée parce que [garantie concrète].'</p>
-          </div>
-        </div>
-      </div>
-      <div class="exercise-card" style="margin-bottom:10px;">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div class="exercise-number" style="background:linear-gradient(135deg,#3182ce,#3182ce99);">3</div>
-          <div style="flex:1;">
-            <div style="font-weight:700;font-size:14px;color:var(--text-bright);margin-bottom:6px;">La Visualisation d'Intégration</div>
-            <p class="text-muted" style="font-size:13px;line-height:1.7;margin:0;">Fermez les yeux. Visualisez vos deux parties qui se font face. Laissez-les se parler, puis se rapprocher. Observez ce qui se passe quand elles s'unissent.</p>
-          </div>
+        <div style="background:#3182ce06;border:1px solid #3182ce22;border-radius:12px;padding:12px;">
+          <p style="font-size:12px;font-weight:700;color:#3182ce;margin-bottom:6px;">Les premières opportunités d'expression progressive :</p>
+          <textarea id="bridge2" rows="2" placeholder="Je peux commencer par... une petite situation où... un contexte sûr pour moi est..." style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;resize:vertical;" oninput="saveUnif()"></textarea>
         </div>
       </div>
     </div>
 
-    <!-- JOURNAL INVITATION -->
+    <!-- ÉCHELLE DE CONFORT -->
+    <div class="glass-card" style="margin-bottom:16px;border-color:#3182ce33;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">📊 ÉTAPE 3 — ÉCHELLE DE CONFORT</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:16px;">Où en êtes-vous dans votre capacité à exprimer votre valeur authentique dans cette situation ?</p>
+      <div style="padding:0 10px;margin-bottom:16px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+          <span style="font-size:12px;color:var(--text-dim);">0 — Impossible pour moi</span>
+          <span style="font-size:12px;color:#3182ce;">Niveau : <strong id="confort-val">5</strong>/10</span>
+          <span style="font-size:12px;color:var(--text-dim);">10 — Parfaitement à l'aise</span>
+        </div>
+        <input type="range" id="confort-slider" min="0" max="10" value="5" style="width:100%;accent-color:#3182ce;height:6px;" oninput="updateConfort(this.value)">
+        <div id="confort-msg" style="font-size:13px;color:var(--text-muted);margin-top:10px;min-height:40px;padding:10px;background:#3182ce06;border-radius:10px;line-height:1.6;"></div>
+      </div>
+      <div style="background:#3182ce06;border:1px solid #3182ce22;border-radius:12px;padding:12px;">
+        <p style="font-size:12px;font-weight:700;color:#3182ce;margin-bottom:6px;">Niveau souhaité dans 30 jours : <span id="target-val">7</span>/10</p>
+        <input type="range" id="target-slider" min="0" max="10" value="7" style="width:100%;accent-color:#3182ce;" oninput="document.getElementById('target-val').textContent=this.value;saveUnif()">
+      </div>
+    </div>
+
+    <!-- LE COMPROMIS CRÉATIF -->
+    <div class="glass-card" style="margin-bottom:16px;border-color:#3182ce22;">
+      <div class="label-gold" style="margin-bottom:12px;border-color:#3182ce44;color:#3182ce;background:#3182ce08;">✨ ÉTAPE 4 — LE COMPROMIS UNIFICATEUR</div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:12px;">La plus petite action que vous pouvez mettre en place <em>dès maintenant</em> pour exprimer votre valeur en toute sécurité :</p>
+      <div style="background:rgba(201,168,76,0.06);border:1px solid var(--border-gold);border-radius:12px;padding:14px;margin-bottom:12px;">
+        <p style="font-size:13px;color:var(--text-muted);line-height:1.7;font-style:italic;margin:0;">Exemple : "Au lieu d'appeler 10 fois, je vais envoyer UN seul message disant ce que je ressens vraiment. C'est une expression authentique ET c'est sécurisé car je ne m'expose qu'à ma propre vérité."</p>
+      </div>
+      <textarea id="compromis" rows="3" placeholder="Ma plus petite action d'unification : je vais..." style="width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px;color:var(--text-main);font-family:'Jost',sans-serif;font-size:13px;resize:vertical;" oninput="saveUnif()"></textarea>
+    </div>
+
     <div class="glass-card" style="background:#3182ce06;border-color:#3182ce33;text-align:center;padding:24px;margin-bottom:16px;">
       <div style="font-size:36px;margin-bottom:12px;">📓</div>
       <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text-bright);margin-bottom:8px;">Ancrez dans votre journal</div>
-      <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto 16px;">Après avoir pratiqué les exercices, utilisez la méthode V.A.L.E.U.R© complète dans votre journal pour ancrer la transformation.</p>
-      <button onclick="VALEUR_JOURNAL.open()" class="btn-glass" style="border-color:#3182ce44;color:#3182ce;">
-        Ouvrir le journal →
-      </button>
+      <p class="text-muted" style="font-size:13px;max-width:340px;margin:0 auto 16px;">Quel compromis avez-vous trouvé ? Comment les deux parties de vous se sentent-elles après cette réconciliation ?</p>
+      <button onclick="VALEUR_JOURNAL.open()" class="btn-glass" style="border-color:#3182ce44;color:#3182ce;">Ouvrir le journal →</button>
     </div>
 
-    <!-- COMPLETE BUTTON -->
-    <button class="complete-btn" id="complete-btn" onclick="completeModule()">
-      ✨ Module UNIFIER complété — Continuer →
-    </button>
-
-    <!-- NAVIGATION -->
+    <button class="complete-btn" id="complete-btn" onclick="completeModule()">✨ Module UNIFIER complété — Continuer →</button>
     <div style="display:flex;gap:12px;">
       <a href="module4.html" class="btn-ghost" style="flex:1;text-align:center;text-decoration:none;">← Module 4</a>
-      <a href="module6.html" class="btn-primary" id="next-btn" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0.5;pointer-events:none;" aria-disabled="true">
-        Module 6 — RENFORCER →
-      </a>
+      <a href="module6.html" class="btn-primary" id="next-btn" style="flex:2;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;opacity:0.5;pointer-events:none;" aria-disabled="true">Module 6 — RENFORCER →</a>
     </div>
-
     <footer class="copyright-footer">
       © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue<br/>
-      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>
-      Tous droits réservés. Reproduction et diffusion interdites.
+      <em>"De la peur à la joie d'être soi"</em> — Éditions L'Harmattan<br/>Tous droits réservés. Reproduction et diffusion interdites.
     </footer>
   </main>
 
   <script>
-/* ═══════════════════════════════════════════════════════════════════
-   JOURNAL-MANAGER.JS — Journal Universel V.A.L.E.U.R©
-   © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon, Psychologue
-   Tous droits réservés.
-   ═══════════════════════════════════════════════════════════════════ */
-
-(function() {
-  'use strict';
-
-  const LS_KEY = 'valeur_journal_entries';
-  const MASQUES = [
-    { id:'rouge',  emoji:'🔴', color:'#e53e3e', label:'Rouge',  peur:'Mort / maladie' },
-    { id:'orange', emoji:'🟠', color:'#ed8936', label:'Orange', peur:'Souffrance psychique' },
-    { id:'jaune',  emoji:'🟡', color:'#d69e2e', label:'Jaune',  peur:'Inconnu / incertitude' },
-    { id:'vert',   emoji:'🟢', color:'#38a169', label:'Vert',   peur:'Rejet / abandon' },
-    { id:'bleu',   emoji:'🔵', color:'#3182ce', label:'Bleu',   peur:'Impuissance' },
-    { id:'indigo', emoji:'🔷', color:'#5a67d8', label:'Indigo', peur:'Échec / inadéquation' },
-    { id:'violet', emoji:'💜', color:'#805ad5', label:'Violet', peur:'Perte d\'identité' },
-  ];
-
-  const STEPS = [
-    { letter:'V', name:'VOIR',       desc:'Quel masque est actif ? Quel est le déclencheur ?' },
-    { letter:'A', name:'ACCUEILLIR', desc:'Quelle émotion est présente ? Comment vous sentez-vous ?' },
-    { letter:'L', name:'LOCALISER',  desc:'Où le ressentez-vous dans votre corps ?' },
-    { letter:'E', name:'EXPLORER',   desc:'Quel conflit intérieur existe ? Une part de moi voudrait... mais une autre...' },
-    { letter:'U', name:'UNIFIER',    desc:'Comment réconcilier ces deux parts de vous ?' },
-    { letter:'R', name:'RENFORCER',  desc:'Quelle nouvelle action choisissez-vous ? Quelle posture nouvelle ?' },
-  ];
-
-  // ── STORAGE ────────────────────────────────────────────────────────
-  function getEntries() {
-    try { return JSON.parse(localStorage.getItem(LS_KEY) || '[]'); } catch(e) { return []; }
+  var CONFORT_MSGS = ['','Tout début — votre masque protège encore tout. C\'est OK, c\'est là que commence le voyage.','Quelques pas — vous commencez à percevoir que le changement est possible.','Vous entrevoyez la sortie — une part de vous y croit déjà.','Les fondations sont là — vous pouvez vous appuyer dessus pour aller plus loin.','Équilibre — vous balancez entre sécurité et authenticité. La conscience est là.','Bien avancé·e — vous choisissez parfois la valeur plutôt que le masque.','Souvent aligné·e — le masque s\'active encore mais vous le reconnaissez vite.','Vous vivez depuis votre valeur dans la plupart des situations.','Très avancé·e — le masque ne gouverne plus vos décisions importantes.','🏆 Pleinement vous-même dans cette situation. Le masque est devenu un simple outil conscient.'];
+  function updateConfort(v) {
+    document.getElementById('confort-val').textContent=v;
+    document.getElementById('confort-msg').textContent = CONFORT_MSGS[parseInt(v)] || '';
+    saveUnif();
   }
-  function saveEntry(entry) {
-    const entries = getEntries();
-    entries.unshift(entry);
-    if (entries.length > 50) entries.splice(50);
-    try { localStorage.setItem(LS_KEY, JSON.stringify(entries)); } catch(e) {}
-    window.dispatchEvent(new CustomEvent('valeur:journal-updated', { detail: { entries } }));
+  function saveUnif() {
+    var vals = {
+      nm: document.getElementById('need-masque').value,
+      nv: document.getElementById('need-valeur').value,
+      uv: document.getElementById('unif-veut').value,
+      up: document.getElementById('unif-peur').value,
+      b1: document.getElementById('bridge1').value,
+      b2: document.getElementById('bridge2').value,
+      cs: document.getElementById('confort-slider').value,
+      ts: document.getElementById('target-slider').value,
+      co: document.getElementById('compromis').value,
+    };
+    try { localStorage.setItem('valeur_unif', JSON.stringify(vals)); } catch(e){}
   }
-  function getStats() {
-    const entries = getEntries();
-    const masqueCounts = {};
-    MASQUES.forEach(m => masqueCounts[m.id] = 0);
-    entries.forEach(e => { if (e.masque) masqueCounts[e.masque] = (masqueCounts[e.masque]||0)+1; });
-    return { total: entries.length, masqueCounts, lastEntry: entries[0] || null };
-  }
-
-  // ── MODAL BUILD ────────────────────────────────────────────────────
-  function buildModal() {
-    const overlay = document.createElement('div');
-    overlay.id = 'valeur-journal-modal';
-    overlay.className = 'modal-overlay';
-    overlay.setAttribute('role','dialog');
-    overlay.setAttribute('aria-label','Journal V.A.L.E.U.R©');
-
-    let selectedMasque = null;
-    const stepValues = ['','','','','',''];
-
-    overlay.innerHTML = `
-      <div class="modal-sheet">
-        <div class="modal-handle"></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
-          <div>
-            <div class="label-gold" style="margin-bottom:8px;">📓 MON JOURNAL</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#f7f3ee;">Méthode V.A.L.E.U.R©</div>
-          </div>
-          <button id="journal-close" style="background:none;border:none;cursor:pointer;color:#64748b;font-size:22px;padding:8px;line-height:1;" aria-label="Fermer">×</button>
-        </div>
-
-        <!-- MASQUE SELECTOR -->
-        <div class="glass-card" style="margin-bottom:16px;padding:16px;">
-          <div style="font-size:12px;font-weight:700;color:#94a3b8;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">Masque actif (optionnel)</div>
-          <div class="masque-grid" id="masque-selector">
-            ${MASQUES.map(m => `
-              <button class="masque-chip" data-masque="${m.id}" style="color:${m.color};" title="${m.label} — ${m.peur}">
-                <span>${m.emoji}</span>
-                <div class="masque-chip-dot" style="background:${m.color};"></div>
-              </button>
-            `).join('')}
-          </div>
-          <div id="masque-selected-label" style="text-align:center;font-size:12px;color:#64748b;margin-top:8px;height:16px;"></div>
-        </div>
-
-        <!-- V.A.L.E.U.R STEPS -->
-        <div id="journal-steps">
-          ${STEPS.map((s,i) => `
-            <div class="journal-step" data-step="${i}">
-              <div class="journal-step-header">
-                <div class="journal-letter">${s.letter}</div>
-                <div>
-                  <div class="journal-label">${s.name}</div>
-                  <div class="journal-sublabel">${s.desc}</div>
-                </div>
-              </div>
-              <textarea class="journal-textarea" data-index="${i}" placeholder="${s.desc}" rows="3" maxlength="500"></textarea>
-            </div>
-          `).join('')}
-        </div>
-
-        <div style="display:flex;gap:10px;margin-top:20px;">
-          <button id="journal-save" class="btn-primary" style="flex:1;">
-            ✨ Enregistrer dans mon journal
-          </button>
-        </div>
-        <div style="text-align:center;font-size:10px;color:#475569;margin-top:12px;letter-spacing:0.5px;">
-          © 2025 Méthode V.A.L.E.U.R© — Céline Bourbon · Données stockées localement
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(overlay);
-
-    // Close
-    overlay.querySelector('#journal-close').addEventListener('click', closeModal);
-    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-
-    // Masque selection
-    overlay.querySelectorAll('.masque-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        overlay.querySelectorAll('.masque-chip').forEach(c => c.classList.remove('selected'));
-        chip.classList.add('selected');
-        selectedMasque = chip.dataset.masque;
-        const m = MASQUES.find(x => x.id === selectedMasque);
-        overlay.querySelector('#masque-selected-label').textContent = m ? `${m.label} — ${m.peur}` : '';
-        overlay.querySelector('#masque-selected-label').style.color = m ? m.color : '#64748b';
-      });
-    });
-
-    // Step focus highlight
-    overlay.querySelectorAll('.journal-textarea').forEach(ta => {
-      ta.addEventListener('focus', () => {
-        overlay.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
-        ta.closest('.journal-step').classList.add('active');
-      });
-      ta.addEventListener('input', e => {
-        stepValues[parseInt(e.target.dataset.index)] = e.target.value;
-      });
-    });
-
-    // Save
-    overlay.querySelector('#journal-save').addEventListener('click', () => {
-      const textareas = overlay.querySelectorAll('.journal-textarea');
-      const steps = {};
-      let hasContent = false;
-      STEPS.forEach((s, i) => {
-        const val = textareas[i].value.trim();
-        if (val) hasContent = true;
-        steps[s.letter] = val;
-      });
-      if (!hasContent && !selectedMasque) {
-        showToast('Remplissez au moins un champ pour enregistrer 🌱');
-        return;
-      }
-      const entry = {
-        id: Date.now(),
-        date: new Date().toISOString(),
-        masque: selectedMasque,
-        steps,
-      };
-      saveEntry(entry);
-      closeModal();
-      showConfetti();
-      showToast('✨ Journal enregistré avec succès');
-    });
-
-    return overlay;
-  }
-
-  // ── FAB BUILD ──────────────────────────────────────────────────────
-  function buildFAB() {
-    const fab = document.createElement('button');
-    fab.className = 'fab';
-    fab.id = 'valeur-fab';
-    fab.setAttribute('aria-label','Ouvrir le journal V.A.L.E.U.R©');
-    fab.setAttribute('title','Journal V.A.L.E.U.R©');
-    fab.innerHTML = '📓';
-    fab.addEventListener('click', openModal);
-    document.body.appendChild(fab);
-    return fab;
-  }
-
-  // ── MODAL CONTROL ──────────────────────────────────────────────────
-  let modalEl = null;
-  function openModal() {
-    if (!modalEl) modalEl = buildModal();
-    modalEl.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    modalEl.querySelectorAll('.journal-textarea')[0]?.focus();
-  }
-  function closeModal() {
-    if (modalEl) {
-      modalEl.classList.remove('open');
-      document.body.style.overflow = '';
-      // Reset form
-      modalEl.querySelectorAll('.journal-textarea').forEach(ta => ta.value = '');
-      modalEl.querySelectorAll('.masque-chip').forEach(c => c.classList.remove('selected'));
-      const lbl = modalEl.querySelector('#masque-selected-label');
-      if (lbl) { lbl.textContent = ''; lbl.style.color = '#64748b'; }
-      modalEl.querySelectorAll('.journal-step').forEach(s => s.classList.remove('active'));
-    }
-  }
-
-  // ── TOAST ──────────────────────────────────────────────────────────
-  let toastEl = null;
-  function showToast(msg) {
-    if (!toastEl) {
-      toastEl = document.createElement('div');
-      toastEl.className = 'toast';
-      document.body.appendChild(toastEl);
-    }
-    toastEl.textContent = msg;
-    toastEl.classList.add('show');
-    clearTimeout(toastEl._timer);
-    toastEl._timer = setTimeout(() => toastEl.classList.remove('show'), 3000);
-  }
-
-  // ── CONFETTI ───────────────────────────────────────────────────────
-  function showConfetti() {
-    const canvas = document.createElement('canvas');
-    canvas.className = 'confetti-canvas';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    document.body.appendChild(canvas);
-    const ctx = canvas.getContext('2d');
-    const COLORS = ['#c9a84c','#f0d080','#e53e3e','#38a169','#3182ce','#805ad5','#ed8936'];
-    const particles = Array.from({length:80},() => ({
-      x: Math.random() * canvas.width,
-      y: -20,
-      vx: (Math.random()-0.5)*4,
-      vy: Math.random()*4+2,
-      r: Math.random()*5+3,
-      color: COLORS[Math.floor(Math.random()*COLORS.length)],
-      rot: Math.random()*360,
-      rv: (Math.random()-0.5)*8,
-      shape: Math.random()>0.5?'circle':'rect'
-    }));
-    let frame = 0;
-    function draw() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      particles.forEach(p => {
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.rot*Math.PI/180);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = Math.max(0, 1 - frame/120);
-        if (p.shape === 'circle') {
-          ctx.beginPath(); ctx.arc(0,0,p.r,0,Math.PI*2); ctx.fill();
-        } else {
-          ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r);
-        }
-        ctx.restore();
-        p.x += p.vx; p.y += p.vy; p.rot += p.rv; p.vy += 0.1;
-      });
-      frame++;
-      if (frame < 150) requestAnimationFrame(draw);
-      else canvas.remove();
-    }
-    requestAnimationFrame(draw);
-  }
-
-  // ── PUBLIC API ─────────────────────────────────────────────────────
-  window.VALEUR_JOURNAL = {
-    open: openModal,
-    close: closeModal,
-    getEntries,
-    saveEntry,
-    getStats,
-    showToast,
-    showConfetti,
-    MASQUES
-  };
-
-  // ── INIT ON DOM READY ──────────────────────────────────────────────
-  function init() {
-    buildFAB();
-    // Prevent right-click and text selection globally
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('selectstart', e => {
-      if (!['INPUT','TEXTAREA'].includes(e.target.tagName)) e.preventDefault();
-    });
-    document.addEventListener('keydown', e => {
-      if ((e.ctrlKey||e.metaKey) && ['c','u','s','a'].includes(e.key.toLowerCase())) {
-        if (!['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)) e.preventDefault();
-      }
-    });
-  }
-
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
-})();
-
-</script>
+  document.addEventListener('DOMContentLoaded', function(){
+    updateConfort(5);
+    try {
+      var u = JSON.parse(localStorage.getItem('valeur_unif')||'{}');
+      if(u.nm) document.getElementById('need-masque').value=u.nm;
+      if(u.nv) document.getElementById('need-valeur').value=u.nv;
+      if(u.uv) document.getElementById('unif-veut').value=u.uv;
+      if(u.up) document.getElementById('unif-peur').value=u.up;
+      if(u.b1) document.getElementById('bridge1').value=u.b1;
+      if(u.b2) document.getElementById('bridge2').value=u.b2;
+      if(u.cs) { document.getElementById('confort-slider').value=u.cs; updateConfort(u.cs); }
+      if(u.ts) { document.getElementById('target-slider').value=u.ts; document.getElementById('target-val').textContent=u.ts; }
+      if(u.co) document.getElementById('compromis').value=u.co;
+    } catch(e){}
+  });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       VALEUR_PROGRESS.render('module5');
@@ -1214,7 +968,7 @@ input, textarea { user-select:text !important; }
       VALEUR_PROGRESS.render('module5');
       setTimeout(() => {
         window.location.href = 'module6.html';
-      }, 2000);
+      }, 2200);
     }
   </script>
 </body>
